@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="225px" height="225px" viewBox="0 0 225 225" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo3</title>
+    <g id="logo3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(4.000000, -15.000000)">
+            <path d="M96,46.8392255 C149.019336,46.8392255 192,89.8198895 192,142.839225 C192,184.158836 165.895404,219.38139 129.278707,232.914394 L95.5,142.839225 L61.8454848,232.585814 C25.6890513,218.818063 0,183.828644 0,142.839225 C0,89.8198895 42.980664,46.8392255 96,46.8392255 Z" id="Combined-Shape" stroke="#781244" stroke-width="8" fill="#C42D78"></path>
+            <rect id="Rectangle" fill="#781244" x="81" y="198.839225" width="30" height="20"></rect>
+            <g id="d" transform="translate(119.000000, 142.000000)">
+                <circle id="Oval" stroke="#FFE0F0" fill="#CF1124" cx="27.5" cy="28.5" r="27.5"></circle>
+                <text font-family="Bauhaus93, Bauhaus 93" font-size="50" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="13" y="45">d</tspan>
+                </text>
+            </g>
+            <g id="4" transform="translate(17.000000, 142.000000)">
+                <circle id="Oval" stroke="#FFE0F0" fill="#B6E0FE" cx="27.5" cy="28.5" r="27.5"></circle>
+                <text font-family="Bauhaus93, Bauhaus 93" font-size="50" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="10" y="45">4</tspan>
+                </text>
+            </g>
+            <g id="w" transform="translate(34.000000, 63.000000)">
+                <circle id="Oval" stroke="#FFE0F0" fill="#0FB5BA" cx="32.0081967" cy="37.9918033" r="32.0081967"></circle>
+                <text font-family="Bauhaus93, Bauhaus 93" font-size="58" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="9" y="52">w</tspan>
+                </text>
+            </g>
+            <g id="face" transform="translate(161.246212, 74.246212) rotate(45.000000) translate(-161.246212, -74.246212) translate(115.246212, 15.246212)">
+                <path d="M68.6336425,7.26790853 C72.5103689,7.26790853 76.0266356,8.03485436 78.5694238,9.30624846 C79.7406981,9.89188563 80.6972749,10.5777017 81.3426086,11.3566883 C81.8303639,11.945461 82.1336425,12.583433 82.1336425,13.2679085 C82.1336425,14.4618918 81.2631092,15.4915494 80.0247325,16.367517 C78.1543227,17.6905541 75.3621561,18.6404672 72.1342334,19.0518934 L72.1342334,19.0518934 L72.1337181,29.2679085 L65.1337103,29.2679085 L65.1341721,19.0520351 C61.9059258,18.6407088 59.1134447,17.6907964 57.2428155,16.367703 C56.004293,15.4916979 55.1336425,14.4619789 55.1336425,13.2679085 C55.1336425,12.583433 55.4369211,11.945461 55.9246763,11.3566883 C56.57001,10.5777017 57.5265868,9.89188563 58.6978611,9.30624846 C61.2406493,8.03485436 64.756916,7.26790853 68.6336425,7.26790853 Z" id="right" stroke="#186FAF" stroke-width="3" fill="#B6E0FE" transform="translate(68.633642, 18.267909) rotate(20.000000) translate(-68.633642, -18.267909) "></path>
+                <path d="M31,6.5 C34.8767264,6.5 38.3929931,7.26694584 40.9357813,8.53833993 C42.1070557,9.1239771 43.0636325,9.80979315 43.7089661,10.5887798 C44.1967214,11.1775525 44.5,11.8155245 44.5,12.5 C44.5,13.6939833 43.6294667,14.7236409 42.39109,15.5996085 C40.5206802,16.9226456 37.7285136,17.8725587 34.500591,18.2839849 L34.500591,18.2839849 L34.5000757,28.5 L27.5000678,28.5 L27.5005296,18.2841266 C24.2722833,17.8728003 21.4798022,16.9228879 19.609173,15.5997945 C18.3706505,14.7237893 17.5,13.6940704 17.5,12.5 C17.5,11.8155245 17.8032786,11.1775525 18.2910339,10.5887798 C18.9363675,9.80979315 19.8929443,9.1239771 21.0642187,8.53833993 C23.6070069,7.26694584 27.1232736,6.5 31,6.5 Z" id="left" stroke="#199473" stroke-width="3" fill="#8EEDC7" transform="translate(31.000000, 17.500000) rotate(-20.000000) translate(-31.000000, -17.500000) "></path>
+                <circle id="Oval" stroke="#C99A2E" stroke-width="5" fill="#E9B949" cx="46.3189438" cy="71.7610628" r="45.5"></circle>
+                <text id="r" font-family="Bauhaus93, Bauhaus 93" font-size="60" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="52" y="73">r</tspan>
+                </text>
+                <text id="o" font-family="Bauhaus93, Bauhaus 93" font-size="60" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="19" y="73">o</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
