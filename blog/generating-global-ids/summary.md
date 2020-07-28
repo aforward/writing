@@ -1,7 +1,7 @@
 # Generating Globally Unique IDs
 #meta sort 2020-05-26
 #meta tags[] elixir
-### May 29, 2020
+## May 29, 2020
 
 Imagine you are building a system to assign unique numbers to each
 resource that you manage. You want the IDs to be guaranteed unique

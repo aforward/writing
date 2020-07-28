@@ -1,5 +1,5 @@
 # LiveView storing Session Data on Redirect
-### May 21, 2019
+## May 21, 2019
 
 As [part of my talk at EMPEX 2019](http://empex.co/events/2019/conference.html) on [LiveView](https://github.com/phoenixframework/phoenix_live_view),
 I showed a (hackish) way of using encrypted `:flash` messages as a means
@@ -8,12 +8,12 @@ If you know a better way, please reach out to me [@a4word](https://twitter.com/a
 
 If you don’t know about LiveView, maybe [read more about that first](/articles/liveview-examples)
 
-## Problem
+### Problem
 
 How can you have your LiveView login form update the user's
 session across pages?
 
-## Sockets do not store Sessions
+### Sockets do not store Sessions
 
 LiveView makes it easy to roll out interactive forms without having to
 write custom JavaScript.  But what if that form wants to store a `user`
@@ -28,7 +28,7 @@ sessions are managed using Connection (aka `conn`) Session.  So we need
 a way to securely tell LiveView connection on `redirect` that our user
 is logged in.
 
-## Sharing Flash Messages
+### Sharing Flash Messages
 
 In web applications, when you do something great (or terrible perhaps)
 most frameworks (Phoenix included) allow you to drop a one-time message
@@ -75,7 +75,7 @@ And then in your template you can unwrap the flash message
 <% end %>
 ```
 
-## LiveView Flash
+### LiveView Flash
 
 To _break out_ of LiveView, you can redirect to a new page.
 At it's simplest it looks like
@@ -100,7 +100,7 @@ avoid the client _writing_ their own flash messages.
 
 ![Putting Flash in a LiveView message](put_flash.png?raw=true)
 
-## Using Flash to pass along login success
+### Using Flash to pass along login success
 
 Knowing that the flash messages can contain any JSONable record, and that
 those messages are encrypted, we can use that that flash information

@@ -1,11 +1,11 @@
 # Webl: A simple web crawler written in Go
-### June 7, 2014
+## June 7, 2014
 
 An exploration of the Go language (golang) to build a simple webcrawler, all code is available on [GitHub](https://github.com/aforward/webl).  This application was written as an exploration of the language and demonstration of the various features of the language; it is not feature complete but should be complex enough to provide some examples of using Go's various concurrent features, tied together in a simple command line and web interface.
 
 ![GitHub Repo for Webl](github.png?raw=true)
 
-## Installation
+### Installation
 
 The webcrawler uses [Redis](https://redis.io), to store results. Please install it and ensure it is running before starting.</p>
 
@@ -26,7 +26,7 @@ go build github.com/aforward/webl/weblconsole
 go build github.com/aforward/webl/webluiß
 ```
 
-## The Web Application
+### The Web Application
 
 To start the webserver
 
@@ -56,7 +56,7 @@ I experimented with [Graph Dracula](http://www.graphdracula.net/) for some bette
 
 ![Graph Dracula view](graph.png?raw=true)
 
-## The Console Application
+### The Console Application
 
 To start the console
 
@@ -75,7 +75,7 @@ In fact, the logged output in the web application is drawn from the same logging
 
 ![Console download](console_download.png?raw=true)
 
-## The Data Store
+### The Data Store
 
 For simplicity, data is stored in a [Redis](https://redis.io) database.  We are using a set to manage all crawled domains.
 
@@ -133,7 +133,7 @@ type Resource struct {
 }
 ```
 
-## Configure The Logger
+### Configure The Logger
 
 To flexibly manage the logging of information, we configured four type of logs:
 
@@ -154,7 +154,7 @@ From the command line, by default, we display INFO, WARN, and ERROR.  Using the 
 
 In addition, the logger also accecpt a WebSocket (\*websocket.Conn), which allows us to stream results from the crawler directly to the browser.
 
-## Using WaitGroups For Concurrency
+### Using WaitGroups For Concurrency
 
 The Crawl algorithm is broken down into two parts: fetch and analyze.  The fetch portion performs an HTTP Get on the domain being crawled, and then passes the response to the analyze to extract the wanted metadata (like status code, and document type) as well as look for additional links to fetch.
 
@@ -268,7 +268,7 @@ func analyzeResource(domainName string, currentUrl string, resp *http.Response, 
 
 For simplicity, I stripped out the persistence of the crawled data, so please refer to the [GitHub project](https://github.com/aforward/webl) to browse the working code.
 
-## Throttle http.Get with a Channel (semaphore)
+### Throttle http.Get with a Channel (semaphore)
 
 Go is fast, fast enough that you can run out of resources locally (i.e. 1024 open files), or burden the remote server.  To throttle goroutines, we use a "full" channel to limit the number of executing http.Get [Implementing a Semaphores in Go](http://www.golangpatterns.info/concurrency/semaphores).
 
@@ -294,7 +294,7 @@ httpLimitChannel <- 1
 
 Here's a great talk [introducing Go's concurrency patterns](https://youtube.com/watch?v=f6kdp27TYZs)
 
-## Respecting Robots.txt
+### Respecting Robots.txt
 
 The [Web Robots Pages](http://www.robotstxt.org/) describes how bots, like webl all allowed to interact with the site.  To achieve this, we used a [robotstxt](https://github.com/temoto/robotstxt-go) and enhanced the fetchResource to keep track of <i>which</i> robots it had loaded to avoid having to fetch the data on each request.
 
@@ -340,7 +340,7 @@ func canRobotsAccess(input string, allRobots map[string]*robotstxt.RobotsData) (
 }
 ```
 
-## If you wanted to improve things
+### If you wanted to improve things
 
 + Adding the ability to manage multiple crawls over a domain and provide a diff of the results.
 + Adding security to prevent abuse from crawling too often.

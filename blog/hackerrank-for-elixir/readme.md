@@ -1,5 +1,5 @@
 # HackerRank Template in Elixir
-### May 27, 2019
+## May 27, 2019
 
 A colleague of mine sent me a link to a hacker rank challenge
 called [Two Character](https://www.hackerrank.com/challenges/two-characters/problem)

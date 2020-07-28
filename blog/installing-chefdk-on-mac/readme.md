@@ -1,5 +1,5 @@
 # Getting Started With ChefDK
-### May 22, 2019
+## May 22, 2019
 
 I am getting back into [Chef](https://www.chef.io/), and the landscape
 seems to have changed quite a bit in the last 10 years.  I am going

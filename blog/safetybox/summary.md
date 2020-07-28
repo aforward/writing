@@ -1,7 +1,7 @@
 # Simple encryption in Elixir
 #meta sort 2015-10-24
 #meta tags[] elixir
-### October 24, 2015
+## October 24, 2015
 
 Of course you don't know anyone that actually stores user passwords in plaintext, or database passwords directly in a repository, so this is more for those theoretical developers to provide them with just a little bit more security; without adding much more complexity.
 

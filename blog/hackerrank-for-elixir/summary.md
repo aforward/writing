@@ -1,7 +1,7 @@
 # HackerRank Template in Elixir
 #meta sort 2019-05-27
 #meta tags[] elixir hackerrank
-### May 27, 2019
+## May 27, 2019
 
 Here's a template for answering HackerRank in Elixir.  This is
 based on the [Two Character](https://www.hackerrank.com/challenges/two-characters/problem)

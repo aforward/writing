@@ -1,5 +1,5 @@
 # The Code I Didn’t Write
-# July 6, 2019
+## July 6, 2019
 
 I enjoy reading job listings. You can learn a lot about
 
@@ -12,9 +12,7 @@ I enjoy reading job listings. You can learn a lot about
 In this article, I will focus on one question that I have
 seen popup in a few times and it goes something like this...
 
-<center>
-<h2>Show us some of your code, and talk about it</h2>
-</center>
+## Show us some of your code, and talk about it
 
 ![Academia vs Business](academia_vs_business.png?raw=true)
 <div class="reference"><a href="https://xkcd.com/664/">XKCD Cartoon</a></div>
@@ -52,19 +50,19 @@ It is also an intimidating question... you have to pick just _one_ piece of code
 
 I see three general approaches to answering this question
 
-### Isolated Code
+#### Isolated Code
 
 Code that did some task, but is isolated enough that you could explain why it's awesome to almost anyone.  This would be the most straight forward answer.  Maybe you implemented an algorithm, or wrote some interesting query, or connected to an API, or solved a programming challenge.
 
-### Symbolic Code
+#### Symbolic Code
 
 Code that is more symbolic and has a great story behind it (so its more the nostalgia of the code versus the code itself).  Maybe it was the first code you wrote as a paid software developer, or in a language you learned on your own, or the first commit in a project that blossomed into something great.
 
-### Humble Code
+#### Humble Code
 
 Code that elicits a negative reaction and acts as a reminder of the terrible, or obtuse, or complicated, or even clever code that you had written in the past and now have to live with that decision. Sometimes we learn better from our mistakes, and helps us to stay humble in a profession that sometimes runs on caffeine and egos.
 
-## Write for the audience, not the author
+### Write for the audience, not the author
 
 Context matters.  Tabs or Spaces; it depends.  Ruby or Java; it depends.  Rebase or merge; it depends.
 
@@ -83,7 +81,7 @@ So, the same piece of code `you think is awesome` could be seen as great when sh
 
 Don't overly tailor your answer, but indeed consider looking into your audience to see what they value and then try to find code that will resonate with them.
 
-## How would I answer that question?
+### How would I answer that question?
 
 It depends.
 
@@ -93,14 +91,14 @@ In this article I wanted to explore an answer that, unless you are [Bob Newhard 
 
 But here goes nonetheless.
 
-## I am most proud of the code I did not write
+### I am most proud of the code I did not write
 
 Much like the feeling of pride when you get to delete code,
 there is equal enjoyment when you can avoid writing code in the first place.  Maybe you were able to solve the problem in a _simpler_ way, or you were able to avoid doing _what every does in similar situations_ because it was not needed in this particular case.
 
 In the abstract, this is a bit too motherly to provide much help to anyone.  So let’s instead look at a few examples to illustrate my thinking about _not_ writing code.
 
-### Flat Files Over A Database
+#### Flat Files Over A Database
 
 Heaven forbid, but yes I recently (2015) wrote an API that stored data in flat files.
 
@@ -116,7 +114,7 @@ And 4 years later, the flat files are still running strong. As a small confessio
 
 So despite the fact that I actually _did_ write the MySQL adapter, as it was never officially used, I consider it among my examples of **code I didn’t have to write**.
 
-### Zero Caching
+#### Zero Caching
 
 I wrote a mortgage calculator API for a new mortgage broker ([Hatch Mortgage](https://hatchmortgage.com/)) that wanted to make things like _affordability_ and _payouts schedules_ much easier for people to navigate and understand.  This company was more interested in helping it's client answer questions from their perspective:
 
@@ -134,7 +132,7 @@ The front end was re-written using Wordpress, but that little Mortgage API remai
 I focussed first on being _right_, and then on being _pretty_, and it turns out we didn’t need to _make it fast_ (as it was already fast enough for the use case).  Indeed some of the API payloads are large coming in at 100kb of data, but that pales in comparison to say a poorly compressed 4mb JPEG image.
 
 
-### Let Your Email Provider Do The Filtering
+#### Let Your Email Provider Do The Filtering
 
 For context, this particular client of mine _loves_ email and as a developer I can appreciate its simplicity so tacking on a product like HelpScout or ZenDesk would not (and in other similar scenarios in fact **did not**) work.
 
@@ -146,7 +144,7 @@ Turns out that the underlying need could be more easily accomplished with an _em
 
 In the end we were able to give the client even more customized filters than they had originally thought possible; and the only coding change was a small **config** to the newly configured email group.
 
-### Re-Using IDs
+#### Re-Using IDs
 
 Last example.
 
@@ -158,7 +156,7 @@ That tiny adapter (let’s say 100 lines of code or so) meant that our automatic
 
 Our solution ended up providing a second benefit.  Turns out that the accounting software had some shall we say _performance bottlenecks_ when serving up invoice data.  As invoices are write-once, we enabled _caching_ by changing the _fetch_ of the invoice data to only be done the first time, which took only a few lines of extra code.
 
-## Be proud of the code you don’t write.
+### Be proud of the code you don’t write.
 
 Although the examples above did involve _some_ code, the underlying spirit of implementing the feature focussed on using what was already available.
 

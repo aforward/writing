@@ -1,5 +1,5 @@
 # Simple encryption in Elixir - So you can stop storing passwords in plain-text
-### October 24, 2015
+## October 24, 2015
 
 Of course you don't know anyone that actually stores user passwords in plaintext, or database passwords directly in a repository, so this is more for those theoretical developers to provide them with just a little bit more security; without adding much more complexity
 
@@ -26,7 +26,7 @@ mix compile
 iex -S mix
 ```
 
-## Encrypting User Data (one-way)
+### Encrypting User Data (one-way)
 
 For one way encryption, e.g. storying user passwords, simply encrypt the string.
 
@@ -46,7 +46,7 @@ iex> Safetybox.is_decrypted("helloworld", pwd)
 true
 ```
 
-## Encrypting Config Data (two-way)
+### Encrypting Config Data (two-way)
 
 You will also want to encrypt configuration passwords, like those for databases.  For this, you will need a secret and salt.
 
@@ -88,7 +88,7 @@ end
 
 The code above is really only as secure as your SECRET and SALT, but it is much, much better than storing passwords directly in your database (no matter how small your project may be). For those trying out [Elixir](https://elixir-lang.org/), [safetybox](https://github.com/aforward/safetybox) provides a simple enough mechanism to encrypt your own passwords, as well as the passwords of your users.
 
-## Behind the scenes
+### Behind the scenes
 
 I did not (nor should I) write the underlying algorithms for providing the encyrption.  I simply wrapped available functions from other libraries in a slightly more user friendly form at the cost of somewhat reduced security.
 
@@ -119,7 +119,7 @@ The decryption function is simiarly wrapped.
 
 If you disagree with me, then I invite you to fork the project and provide your own approach.
 
-## Resources
+### Resources
 
 - [Safetbox Source (Github)](https://github.com/aforward/safetybox)
 - [HEX API Documentation](https://hexdocs.pm/safetybox/)

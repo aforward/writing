@@ -1,6 +1,7 @@
 # The Code I Didn’t Write
 #meta sort 2019-07-06
 #meta tags[] software
+## July 6, 2019
 
 I enjoy reading job listings.  There's the "what's trending"
 angle to see the types of skills that appear to be in bemand.

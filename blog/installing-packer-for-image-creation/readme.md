@@ -1,5 +1,5 @@
 # Installing Packer For Image Creation
-### July 3, 2019
+## July 3, 2019
 
 Now that we have [installed chefdk](/articles/installing-chefdk-on-mac)
 and are connected to our [aws via saml](/articles/connecting-to-aws-using-saml)

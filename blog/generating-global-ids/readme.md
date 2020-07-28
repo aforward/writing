@@ -1,7 +1,7 @@
 # Generating Globally Unique IDs
 ## May 29, 2020
 
-## Problem
+### Problem
 
 Imagine you are building a system to assign unique numbers to each
 resource that you manage. You want the IDs to be guaranteed unique
@@ -15,11 +15,11 @@ There are a fixed number of nodes in the system, up to 1024.
 Each node knows its ID at startup and that ID never changes
 for the node.
 
-## Solution
+### Solution
 
 You can [visit the source on GitHub](https://github.com/work-samples/global_id)
 
-### Unsynchronized ID Generation
+#### Unsynchronized ID Generation
 
 We are splitting the ID generation between several nodes.
 To build a guaranteed-globally-unique generator without
@@ -38,7 +38,7 @@ XXXXXXXXXX YYYYY.........YYYYY
   10 bits        54 bits
 ```
 
-### By-Hand Demonstration
+#### By-Hand Demonstration
 
 Let's demonstrate with an example.  But, we will use
 smaller numbers to better visualize the solution.  Let's
@@ -65,7 +65,7 @@ of a 3-bit number.  Global uniqueness will be assured by
 our NodeId prefix (the first two bits).
 
 
-### Elixir Demonstration
+#### Elixir Demonstration
 
 This can be represented using
 [Bitstrings](https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#bitstrings)
@@ -100,7 +100,7 @@ To extract the `integer` we can use Elixir pattern matching
 <<n::5>> = <<1::2,1::3>>
 ```
 
-### Elixir Template Solution
+#### Elixir Template Solution
 
 We now have enough to build a template solution for our GlobalId.
 
@@ -140,7 +140,7 @@ many numbers can be generated so we can evaluate
 the appropriateness of our solution.
 
 
-### How Many Unique Numbers are Possible
+#### How Many Unique Numbers are Possible
 
 Our system can, at most, distribute up to a million-trillion
 unique IDs (2^64 = 64-bit number).
@@ -159,7 +159,7 @@ unique IDs (2^54)
 kT   T   B   M
 ```
 
-### Timestamp solution
+#### Timestamp solution
 
 A timestamp-based solution is simple but offers two possible
 problems.
@@ -169,7 +169,7 @@ will there ever be two requests at the exact _same time_
 (based on the precision of our timestamp)
 causing our solution to (incorrectly) return duplicate IDs.
 
-#### How long will 2^54 last?
+##### How long will 2^54 last?
 
 Today's date (approx) is 1.5 billion milliseconds
 
@@ -187,7 +187,7 @@ There are about 30 billion milliseconds each year
 (365\*24\*60\*60\*1000), so we have until the year 600k
 until we exhaust 2^54 numbers based on a timestamp.
 
-#### Two Requests At the Same Time?
+##### Two Requests At the Same Time?
 
 This is a bigger concern for uniqueness.
 
@@ -210,14 +210,14 @@ def next_id, do: :os.system_time(:microsecond)
 If we cannot guarantee those conditions then we need to
 look at `GlobalId` maintaining its counter.
 
-### How much to count?
+#### How much to count?
 
 Our system could receive 100,000 requests a second.
 But we don't know the distribution within the second.
 Maybe they all arrive at once, or maybe they are
 evenly distributed about 100 every millisecond.
 
-##### Counting 100k every second
+###### Counting 100k every second
 
 If we have no guarantees about how the requests are
 distributed within a second, then we need 17 bits to
@@ -247,13 +247,13 @@ numbers or 5 years.
 
 Clearly not enough.
 
-#### To-The-Second Precision
+##### To-The-Second Precision
 
 We could consider to-the-second precision for our timestamp
 as we would be managing sub-second counting, this would give
 us around 4.5k years of unique numbers.
 
-#### Counting 100 every millisecond
+##### Counting 100 every millisecond
 
 We could also see if our messages would be evenly distributed
 throughout every millisecond, which would require only 7 bits
@@ -289,7 +289,7 @@ uniformly 10/ms) then our system would last for about 500 years.
  T    B   M
 ```
 
-#### Why keep the timestamp?
+##### Why keep the timestamp?
 
 You could argue if your system can count to a thousand, or
 to one-hundred thousand, why not have it do all the counting?
@@ -303,7 +303,7 @@ to generate globally unique numbers.  This works nicely with
 Elixir/Erlang as our `GlobalId` could be part of a supervision tree
 that could automatically re-start it on failure.
 
-### Counting in Elixir
+#### Counting in Elixir
 
 Elixir (and Erlang) offer several mechanisms to
 support internal state.  The most commonly used is a GenServer
@@ -346,7 +346,7 @@ to use this counter.
   def next_id(pid), do: GenServer.call(pid, :next_id)
 ```
 
-#### Full Solution
+##### Full Solution
 
 Our full solution using the GenServer is shown below.
 
@@ -418,7 +418,7 @@ defmodule GlobalId do
 end
 ```
 
-### Debugging our Implementation
+#### Debugging our Implementation
 
 From the elixir shell (within a project holding our `GlobalId`)
 
@@ -445,7 +445,7 @@ iex> GlobalId.next_id(pid)
 ```
 
 
-### Implementing the Node ID
+#### Implementing the Node ID
 
 Right now our NodeId is hard-coded, let's expand that
 to grab from our internal state.
@@ -520,7 +520,7 @@ defmodule GlobalId do
 end
 ```
 
-## Testing
+### Testing
 
 The testing of our ID generator can be split into
 
@@ -528,7 +528,7 @@ The testing of our ID generator can be split into
 * Is it fast enough?
 * Is it guaranteed unique?
 
-### Is is correct?
+#### Is is correct?
 
 A fast service that returns incorrect results is somewhat useless.
 So our first tests focus on example-driven testing (aka unit testing)
@@ -577,7 +577,7 @@ through at least 100 values so that our time-based approach could
 end
 ```
 
-### Is it fast enough?
+#### Is it fast enough?
 
 Next, we consider performance.  For that, we used [benchee](https://hex.pm/packages/benchee)
 
@@ -639,7 +639,7 @@ The definition of each field is below:
 The results seem to indicate our ID generator will work
 well at producing 100k IDs per second.
 
-### Is it guaranteed unique?
+#### Is it guaranteed unique?
 
 We can test our uniqueness guarantee by launching 1024 nodes
 and concurrently requesting IDs from them and ensuring
@@ -679,7 +679,7 @@ test "globally unique" do
 end
 ```
 
-## Summary
+### Summary
 
 Based on theoretical analysis of bitstrings, mixed with
 some engineering benchmarks, our solution seems to provide

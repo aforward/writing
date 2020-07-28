@@ -1,5 +1,5 @@
 # LiveView at EMPEX 2019
-### May 18, 2019
+## May 18, 2019
 
 ![My Talk on LiveView](title.png?raw=true)
 
@@ -14,7 +14,7 @@ Here is the actual talk from May 2019
 
 [![Andrew Forward's talk on LiveView at Empex 2019](https://img.youtube.com/vi/KvvkWiECvjY/0.jpg){: .w-full}](https://www.youtube.com/watch?feature=player_embedded&v=KvvkWiECvjY)
 
-## Getting Started
+### Getting Started
 
 Checkout the [curated List of LiveView Demos](/articles/liveview-examples)
 as it includes links to articles on getting started and adding LiveView to your project.
@@ -35,7 +35,7 @@ the raw reality of potential many missteps.
 
 ![LiveView Survey](liveview_survey.png?raw=true)
 
-## Optimizing Dividend Reinvestment - The APP
+### Optimizing Dividend Reinvestment - The APP
 
 I love dividends, and we worked through two examples of migrating [a dividend optimization app](https://dividends.io) away from JavaScript and JQuery to LiveView.
 
@@ -53,7 +53,7 @@ Let's build a application to help Alice and Bob optimize their DRIPs.
 
 ![Let's Get Started](letsgetstarted.png?raw=true)
 
-## Client Side Versus Server Side Rendering
+### Client Side Versus Server Side Rendering
 
 A (somewhat esoteric) server side only rendition would look like
 
@@ -80,17 +80,17 @@ Our client then updates the display.  Here’s we have plain old HTML templates 
 ![Client Update](client_update.png?raw=true)
 
 
-## Ceremony Versus Substance
+### Ceremony Versus Substance
 
 Lets not confuse ceremony for substance.  There is a lot of boilerplate involved with setting up rich client-side interactions.  We have API calls registered on the client, and supported on the server.  We need our server to support those API endpoints, a decided upon message format to exchange information, our client needs to register events and make those API calls and finally the client needs to react to changes and update the display.
 
-### Managing Portfolio Ceremony Versus Substance
+#### Managing Portfolio Ceremony Versus Substance
 
 ![Managing Portfolio Ceremony Versus Substance](crud_ceremony_substance.png?raw=true)
 
 Contrast that with the substance of what we are trying to do… ultimately we are trying to do CRUD operations on our stock positions.  How much ceremony is dependent on the framework you are using, but the substance is usually constant regardless of picking Vue over React over jQuery.
 
-### Login Ceremony Versus Substance
+#### Login Ceremony Versus Substance
 
 Our dividending application will support _email_ based authentication, and is implemented with a multi-step form.
 
@@ -102,7 +102,7 @@ Some find this annoying, but we can’t please everyone all the time.  Our appli
 
 Ultimately we are trying to authenticate a user, which for our rarely used service is all about generating a secure token, sending it via email, and later validating it.
 
-## An easier way?
+### An easier way?
 
 I usually tend to start with jQuery (mostly for the AJAX library and convenient DOM selectors) and then as bugs arrive due to a mismatch between how the client and server handle state (and rendering), then I consider reaching for more sophisticated tools.
 
@@ -110,7 +110,7 @@ But, I am really just building a glorified spreadsheet, so I should not have to 
 
 It really should not be this hard.
 
-## Enter Live View
+### Enter Live View
 
 And tada, it isn’t.
 
@@ -128,7 +128,7 @@ So it’s obviously not _no_ javascript, there is LiveView JavaScript that will 
 
 Let’s look at the major moving parts of LiveView
 
-## LiveView Client/Server Communication
+### LiveView Client/Server Communication
 
 For our login behaviour.
 

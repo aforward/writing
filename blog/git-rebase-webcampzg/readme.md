@@ -1,5 +1,5 @@
 # git rebase -i HEAD\~25
-### Oct 11, 2019
+## Oct 11, 2019
 
 ![git rebase -i HEAD~25 slide 01](gitrebase.001.png?raw=true)
 
@@ -7,7 +7,7 @@ You can watch the video below, or keep reading for a transcript.
 
 [![Andrew Forward's talk on git rebase -i HEAD~25 at WebCamp Zagreb](https://img.youtube.com/vi/V53cpDt2dr0/0.jpg){: .w-full}](https://www.youtube.com/watch?v=V53cpDt2dr0)
 
-## Git is complicated.
+### Git is complicated.
 
 ![git rebase -i HEAD~25 slide 02](gitrebase.002.png?raw=true)
 

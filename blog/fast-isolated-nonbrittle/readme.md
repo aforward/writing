@@ -1,5 +1,5 @@
 # I don't like the name *unit tests*.
-### Jul 10, 2020
+## Jul 10, 2020
 
 I think it leads to arguing along the lines of _hey this isn't a unit test_.
 
@@ -26,7 +26,7 @@ If it has a name, it's probably wrong.
 
 Names are important, very important, but somethings they can be distracting.
 
-## Qualities of Good Automated Tests
+### Qualities of Good Automated Tests
 
 I prefer to focus on three qualities of good automated tests
 
@@ -36,7 +36,7 @@ I prefer to focus on three qualities of good automated tests
 
 My insights into Testing are largely based on Kent Beck (see [Qualities of a Good Tests](https://www.infoq.com/news/2008/10/qualities_good_test/) and [Programmer Test Principles](https://medium.com/@kentbeck_7670/programmer-test-principles-d01c064d7934))
 
-### Faster is Better Than Slower
+#### Faster is Better Than Slower
 
 Fast is relative.
 
@@ -50,7 +50,7 @@ As your code base grows, even with the best intentions some of your test might *
 
 At this point, you offload those slow tests and no longer run them all the time.  Just never let it excuse you from always trying to make your tests run fast.
 
-### Sturdy is Better Than Brittle
+#### Sturdy is Better Than Brittle
 
 Some examples of brittleness in tests might include
 
@@ -65,7 +65,7 @@ Some examples of brittleness in tests might include
 
 A sturdy test is one that rarely (ideally never) fails with a false negative (i.e. the test failed but the code is just fine).  With experience you will get better at knowing *before hand* what may (or may not) make a test brittle, but even if you don't, your brittle tests will eventually tell you how brittle they are.
 
-### Isolated is Better Than Coupled
+#### Isolated is Better Than Coupled
 
 As you make changes to your code base tests will eventually start to fail, and that's a good thing.  The test suite can act as a great tool to show you possible regressions based on changes.  But, if can also highlight spots where your test suite has unnecessarily coupling to assumed behaviour.
 
@@ -75,13 +75,13 @@ Imagine that you are writing in invoicing app.  You have tests that calculate th
 
 Turns out a lot of your tests were duplicating knowledge of the tax calculation and when things changed that assumptions were no longer true and now those tests starting blowing up.  You cannot fully isolate yourself from this scenario, and different testing frameworks give you different tools to deal with coupled tests, but it is something to be aware of something to work to minimize.  I am not advocating any particular solution to dealing with coupled tests and there is no one solution for every scenario.
 
-## Go Forth and Automate
+### Go Forth and Automate
 
 Almost always having tests is better than not having tests.
 
 Try not to argue too much about whether a test is a unit test, an integration, a system test and instead focus on if the test is fast, sturdy and isolated.  Defer complexity in your build pipeline until it's a must, as it's always easier to change a simple process than a complex one.
 
-## Resources
+### Resources
 
 * [Kent Beck Qualities of Good Tests (2008)](https://www.infoq.com/news/2008/10/qualities_good_test/)
 * [Programmer Test Principles by Kent Beck (2019)](https://medium.com/@kentbeck_7670/programmer-test-principles-d01c064d7934)

@@ -1,10 +1,10 @@
 # Connecting to AWS using SAML
-### May 29, 2019
+## May 29, 2019
 
 In this article we will connect to our AWS account using SAML, this will allow us to run
 AWS CLI commands using the same authentication as you use in the browser.
 
-## Installing AWS CLI
+### Installing AWS CLI
 
 You can [read the full instructions here](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html),
 below are instructions just for the mac and might be out of date.
@@ -27,7 +27,7 @@ $ aws --version
 aws-cli/1.16.167 Python/2.7.10 Darwin/18.6.0 botocore/1.12.157
 ```
 
-## Installing SAML2AWS
+### Installing SAML2AWS
 
 Let's install [saml2aws](https://github.com/Versent/saml2aws) to allow
 us to login and retrieve AWS temporary credentials.  This uses SAML with
@@ -49,7 +49,7 @@ $ saml2aws --version
 Now let's configure account access (and 12 hour access).  For simplicity let's call our
 AWS Account Name  `10xdev`.  So where ever you see `10xdev` please do not
 
-## Connect SAML to your AWS Account
+### Connect SAML to your AWS Account
 
 ```
 saml2aws configure -a 10xdev --session-duration 43200
@@ -66,7 +66,7 @@ Answer all the questions, with help probably.  Here's an example using JumpCloud
 ? Confirm *************************
 ```
 
-## Login To AWS using SAML
+### Login To AWS using SAML
 
 If everything worked as expected, then you should be able to use `saml2aws` to login.
 
