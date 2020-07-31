@@ -1,7 +1,7 @@
 # Turn the Ship Around!
 ## L. David Marquet
 #meta published May 16, 2013
-#meta tags[] basecamp seg4x05 unread
+#meta tags[] basecamp pm unread
 #meta sort 2013-05-16
 
 ![Turn the Ship Around](turn-that-ship-around.png)
