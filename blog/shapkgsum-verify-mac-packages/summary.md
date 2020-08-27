@@ -8,3 +8,4 @@ I have been looking at using [1Password's CLI tool](https://support.1password.co
 
 ![Verify Mac Package fingerprint](mac-verify-fingerprint.png?raw=true)
 
+I decided to write a small [shapkgsum](https://github.com/aforward/shapkgsum) script in [golang](https://golang.org) to make that verification easier to automate. 
