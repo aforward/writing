@@ -206,6 +206,10 @@ ever having to ask a real person for a secret.
 D. When the build script is done, you can delete your `opsession`
 completely removing any trace of those very secret secrets.
 
+To be even safer (thanks Tom!), do not upload the `opsession` file,
+but instead just push the generated `OP_SESSION` token.  That way
+your server (regardless of how careless you might be) only has
+30 minutes of access to the 1password account.
 
 ### Code Generator for opsession
 
