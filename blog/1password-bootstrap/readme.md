@@ -1,4 +1,4 @@
-# Automation with 1Password CLI
+# Bootstrapping 1Password CLI using Expect
 ## August 27, 2020
 
 Did you know [1Password has a CLI tool](https://support.1password.com/command-line-getting-started/)?  Password management and automation
@@ -206,10 +206,24 @@ ever having to ask a real person for a secret.
 D. When the build script is done, you can delete your `opsession`
 completely removing any trace of those very secret secrets.
 
-To be even safer (thanks Tom!), do not upload the `opsession` file,
-but instead just push the generated `OP_SESSION` token.  That way
-your server (regardless of how careless you might be) only has
-30 minutes of access to the 1password account.
+A major benefit to the above is that once `opsession` is seeded into
+your (**secure**) build environment then you can completely automate
+all your secret needs.
+
+### Warning, Warning, Protect that opsession
+
+After some conversations with a colleague Tom, he raised concerns
+about possibly being careless with the `opsession` file and accidentially
+exposing to our 1password account.
+
+Indeed, we are trading increased levels of automation with increased
+security exposure as our `opsession` does contain all the necessary ingredients to
+access your 1password account.  For small teams (or solo-preneurs) that's fine,
+but within an organization the exposure from carelessness is not worth it.
+
+To avoid sharing that information directly you can instead just
+share the 30-minute token as [discussed here](/articles/1password-sessions).
+By just sharing the token, your build server is now
 
 ### Code Generator for opsession
 
