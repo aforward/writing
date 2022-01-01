@@ -1,5 +1,5 @@
-# The Manual: A Philosopher's Guide to Life Paperback
-## Epictetus, Sam Torode
+# The Manual: A Philosopher's Guide to Life Paperback
+## Epictetus, Sam Torode
 #meta published May 11, 2017
 #meta tags[] basecamp zen unread
 #meta sort 2017-05-11

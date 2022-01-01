@@ -8,7 +8,7 @@ We are first teased that the talk was intended to be about "the use of symmetry 
 For me, the highlights of the talk include
 
 ```
-Making big changes can emerge from making little ones
+Making big changes can emerge from making little ones
 ```
 
 Beck uncovered this idea when he was refactoring "running one test" in JUnit and the changes ultimately resulting in the Rules annotation.
@@ -28,7 +28,7 @@ Kent dislikes the term requirements, as your system is in production and people 
 
 ```
 Don't estimate, timebox as an exploration. But stupid
-when you have __hundreds__ of people working on a stable product.
+when you have __hundreds__ of people working on a stable product.
 ```
 
 Engineering skills in software development demand for different approaches in different scenarios. Here Kent is discussing the notion of certification and how to measure the engineering-ness of an engineer.
