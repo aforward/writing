@@ -54,7 +54,7 @@ hugo new site homepage
 But then added a [.gitignore](https://github.com/github/gitignore/blob/main/community/Golang/Hugo.gitignore)
 to ensure we leave out the unnecessary stuff (also show below).
 
-```
+```bash
 # Generated files by hugo
 /public/
 /resources/_gen/
@@ -90,7 +90,7 @@ node_modules/
 
 Create a `postcss.config.js`
 
-```bash
+```javascript
 module.exports = {
  plugins: {
    tailwindcss: {},
