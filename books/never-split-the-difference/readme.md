@@ -2,7 +2,7 @@
 ## Chriss Voss
 #meta published May 17, 2016
 #meta tags[] nonfiction read 2021
-#meta sort 2016-05-17
+#meta datetime 2016-05-17
 
 ![never-split-the-difference](never-split-the-difference.png)
 

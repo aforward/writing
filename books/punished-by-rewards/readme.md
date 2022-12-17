@@ -2,7 +2,7 @@
 ## Alfie Kohn
 #meta published Sep 1, 1999
 #meta tags[] basecamp pm unread
-#meta sort 1999-09-01
+#meta datetime 1999-09-01
 
 ![Punished by Rewards: The Trouble with Gold Stars, Incentive Plans, A's, Praise, and Other Bribes](punished-by-rewards.png)
 

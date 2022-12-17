@@ -2,7 +2,7 @@
 ## Henrik Kniberg
 #meta published Dec 1, 2011
 #meta tags[] pragprog read
-#meta sort 2011-12-01
+#meta datetime 2011-12-01
 
 ![Lean From the Trenches: Managing Large Scale Projects with Kanban](lean-from-the-trenches.png)
 

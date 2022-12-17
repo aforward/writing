@@ -2,7 +2,7 @@
 ## L. David Marquet
 #meta published May 16, 2013
 #meta tags[] basecamp pm unread
-#meta sort 2013-05-16
+#meta datetime 2013-05-16
 
 ![Turn the Ship Around](turn-that-ship-around.png)
 

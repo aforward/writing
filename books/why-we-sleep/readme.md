@@ -2,7 +2,7 @@
 ## Matthew Walker
 #meta published October 1, 2017
 #meta tags[] nonfiction read 2021
-#meta sort 2017-10-01
+#meta datetime 2017-10-01
 
 ![Why We Sleep: Unlocking the Power of Sleep and Dreams](why-we-sleep.png)
 

@@ -2,7 +2,7 @@
 ## George Orwell
 #meta published June 8, 1949
 #meta tags[] read 2021
-#meta sort 1949-06-08
+#meta datetime 1949-06-08
 
 ![1984](1984.png)
 

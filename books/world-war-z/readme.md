@@ -2,7 +2,7 @@
 ## Max Brooks
 #meta published October 16, 2007
 #meta tags[] zombies fiction read 2021
-#meta sort 2007-10-16
+#meta datetime 2007-10-16
 
 ![World War Z: An Oral History of the Zombie War](world-war-z.png)
 

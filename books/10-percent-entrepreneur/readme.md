@@ -2,7 +2,7 @@
 ## Patrick J. McGinnis
 #meta published April 12, 2016
 #meta tags[] read 2021
-#meta sort 2016-04-12
+#meta datetime 2016-04-12
 
 ![The 10% Entrepreneur: Live Your Startup Dream Without Quitting Your Day Job](10-percent-entrepreneur.png)
 

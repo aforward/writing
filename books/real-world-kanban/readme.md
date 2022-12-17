@@ -2,7 +2,7 @@
 ## Mattias Skarin
 #meta published June 1, 2015
 #meta tags[] pragprog pm read
-#meta sort 2015-06-01
+#meta datetime 2015-06-01
 
 ![Real-World Kanban: Do Less, Accomplish More with Lean Thinking](real-world-kanban.jpg)
 

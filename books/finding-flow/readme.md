@@ -2,7 +2,7 @@
 ## Mihaly Csikszentmihalyi
 #meta published Apr 6, 1998
 #meta tags[] basecamp unread
-#meta sort 1998-04-06
+#meta datetime 1998-04-06
 
 ![Finding Flow: The Psychology of Engagement with Everyday Life ](finding-flow.png)
 

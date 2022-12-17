@@ -2,7 +2,7 @@
 ## Epictetus, Sam Torode
 #meta published May 11, 2017
 #meta tags[] basecamp zen unread
-#meta sort 2017-05-11
+#meta datetime 2017-05-11
 
 ![The Manual](the-manual.png)
 
