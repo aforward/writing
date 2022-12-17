@@ -4,7 +4,7 @@
 
 ## Summary
 
-![Hugo and Tailwind CSS homepage](hugo_and_tailwind.png?raw=true)
+![Hugo and Tailwind CSS homepage](hugo_and_tailwind/html.png)
 
 I was experimenting with [Hugo](https://gohugo.io)
 as a static site generator for a project.  Despite
@@ -24,7 +24,7 @@ All code is available on [GitHub at /work-samples/hugo-and-tailwindcss](https://
 
 ## Installing Hugo with Tailwind CSS
 
-![Hugo and Tailwind CSS homepage](hugo_and_tailwind.png?raw=true)
+![Hugo and Tailwind CSS homepage](hugo_and_tailwind/html.png)
 
 I was experimenting with [Hugo](https://gohugo.io)
 as a static site generator for a project.  Despite
