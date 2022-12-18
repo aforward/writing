@@ -260,4 +260,4 @@ There are two pull requests against the the original project [PR#70 and PR#71], 
 
 To learn more about the practice of continuous, consider picking up this great (albeit now out of print) book Continuous Testing with Ruby, Rails and Javascript
 
-![Continuous Testing with Ruby](continuous_testing_ruby.jpg?raw=true)
+![Continuous Testing with Ruby](books/continuous_testing_ruby.jpg)
