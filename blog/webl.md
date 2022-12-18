@@ -6,13 +6,13 @@
 
 An exploration of the Go language (golang) to build a simple webcrawler, all code is available on [Github](https://github.com/aforward/webl). This application was written as an exploration of the language and demonstration of the various features of the language; it is not feature complete but should be complex enough to provide some examples of using Go's various concurrent features, tied together in a simple command line and web interface.
 
-![List](list.png?raw=true)
+![List](webl/list.png)
 
 ## Article
 
 An exploration of the Go language (golang) to build a simple webcrawler, all code is available on [GitHub](https://github.com/aforward/webl).  This application was written as an exploration of the language and demonstration of the various features of the language; it is not feature complete but should be complex enough to provide some examples of using Go's various concurrent features, tied together in a simple command line and web interface.
 
-![GitHub Repo for Webl](github.png?raw=true)
+![GitHub Repo for Webl](webl/github.png)
 
 ### Installation
 
@@ -47,23 +47,23 @@ go build
 
 The launched application should be available at [http://127.0.0.1:4005](http://127.0.0.1:4005), and you can add urls to crawl.
 
-![Adding a URL](add_url.png?raw=true)
+![Adding a URL](webl/add_url.png)
 
 Using websockets, it attaches itself to the running project and streams the current status back to Javascript.
 
-![The Logger](logger.png?raw=true)
+![The Logger](webl/logger.png)
 
 Data is persisted to [Redis](https://redis.io), so that you can view recently crawled
 
-![Found files list view](list.png?raw=true)
+![Found files list view](webl/list.png)
 
 In the details view, we show the sitemap as a table, showing links (to other pages), and assets (being used on the current page, e.g. Javascript / CSS). For simplicity, we are only crawling within a domain (e.g. a4word.com), and do not look beyond (e.g. twitter.com / facebook.com) or within other subdomains (e.g. admin.a4word.com).
 
-![Found files table view](table_view.png?raw=true)
+![Found files table view](webl/table_view.png)
 
 I experimented with [Graph Dracula](http://www.graphdracula.net/) for some better visualizations, but right now the results are far too busy.
 
-![Graph Dracula view](graph.png?raw=true)
+![Graph Dracula view](webl/graph.png)
 
 ### The Console Application
 
@@ -78,11 +78,11 @@ go build
 
 The webl library is consumed by a web application (described above) and console application, described here.  Both systems are thin clients and push most of the work to the Go library.
 
-![Console help flag](console_help.png?raw=true)
+![Console help flag](webl/console_help.png)
 
 In fact, the logged output in the web application is drawn from the same logging information used to display to the console (but the console has extra flags to turn verbosity up and down)
 
-![Console download](console_download.png?raw=true)
+![Console download](webl/console_download.png)
 
 ### The Data Store
 
@@ -307,7 +307,7 @@ Here's a great talk [introducing Go's concurrency patterns](https://youtube.com/
 
 The [Web Robots Pages](http://www.robotstxt.org/) describes how bots, like webl all allowed to interact with the site.  To achieve this, we used a [robotstxt](https://github.com/temoto/robotstxt-go) and enhanced the fetchResource to keep track of <i>which</i> robots it had loaded to avoid having to fetch the data on each request.
 
-![Robots dot text](robots_txt.png?raw=true)
+![Robots dot text](webl/robots_txt.png)
 
 The bulk of the heavy lifting looks like the following:
 
