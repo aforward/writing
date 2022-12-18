@@ -4,7 +4,7 @@
 
 ## Summary
 
-[![Highlights of Llewellyn Falco - From 0% to Cleanly Refactored 100% tested code](https://img.youtube.com/vi/wp6oSVDdbXQ/0.jpg){: .w-full}](https://www.youtube.com/watch?feature=player_embedded&v=wp6oSVDdbXQ)
+[![Highlights of Llewellyn Falco - From 0% to Cleanly Refactored 100% tested code](https://img.youtube.com/vi/wp6oSVDdbXQ/0.jpg)](https://www.youtube.com/watch?feature=player_embedded&v=wp6oSVDdbXQ)
 
 Gives you some legacy code to practice.
 
@@ -12,7 +12,7 @@ The video goes through the [Gilded Rose Kata](https://github.com/emilybache/Gild
 
 ## Article
 
-[![Highlights of Llewellyn Falco - From 0% to Cleanly Refactored 100% tested code](https://img.youtube.com/vi/wp6oSVDdbXQ/0.jpg){: .w-full}](https://www.youtube.com/watch?feature=player_embedded&v=wp6oSVDdbXQ)
+[![Highlights of Llewellyn Falco - From 0% to Cleanly Refactored 100% tested code](https://img.youtube.com/vi/wp6oSVDdbXQ/0.jpg)](https://www.youtube.com/watch?feature=player_embedded&v=wp6oSVDdbXQ)
 
 Gives you some legacy code to practice.
 
@@ -45,11 +45,11 @@ Assigns risk to the comments `F` and `B` and `!!!` introduce risk, the lower cas
 
 Falco is using a tool to support [Test-Commit-Revert](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864), where every day is committed if it the tests pass.
 
-![TCR tool in Java](tcr_commit.png?raw=true)
+![TCR tool in Java](videos/llewellyn-falco-from-0-to-100-tested-code/tcr_commit.png)
 
 Much of the first part of the talk is about _documenting_ through tests the behaviour of the existing method, and using a coverage tool here is very helpful in showing that you have (well) covered all the existing code before you try and change it.
 
-![Adding tests to increase coverage before refactoring](another_input.png?raw=true)
+![Adding tests to increase coverage before refactoring](videos/llewellyn-falco-from-0-to-100-tested-code/another_input.png)
 
 It takes about 20 lines of code and 400 _tests_ until 100% coverage is achieved and we can start to do actual work.
 
