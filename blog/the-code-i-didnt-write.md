@@ -26,7 +26,7 @@ seen popup in a few times and it goes something like this...
 
 ## Show us some of your code, and talk about it
 
-![Academia vs Business](academia_vs_business.png?raw=true)
+![Academia vs Business](the-code-i-didnt-write/academia_vs_business.png)
 <div class="reference"><a href="https://xkcd.com/664/">XKCD Cartoon</a></div>
 
 
@@ -41,7 +41,7 @@ There are so many layers to an answer, but you also must bear in mind the target
 
 You are writing this as part of your _best self_, this is not being untrue to yourself anymore than it's untrue to wear a suit to an interview even though you might not wear them everyday.
 
-![Tuxedo After 6pm](tuxedo.jpg?raw=true)
+![Tuxedo After 6pm](the-code-i-didnt-write/tuxedo.jpg)
 
 <div class="reference"><a href="https://www.imdb.com/title/tt2235831/mediaviewer/rm3052254720">Image From IMDB</a></div>
 
@@ -82,7 +82,7 @@ Regardless how pure you want your answer to be, in this context it is being aske
 
 In one (of many) great talks from [Chad Fowler](http://chadfowler.com/), we get some insight into the [dangers of stability and homeostatis](https://www.youtube.com/watch?v=sAsRtZEGMMQ).  The system _should_ be heterogenous by default and getting into the habit of throwing code away.
 
-![Heterogenous By Default](heterogenous_by_default.png?raw=true)
+![Heterogenous By Default](the-code-i-didnt-write/heterogenous_by_default.png)
 
 Contrast that with an tweet from from [David Heinemeier Hansson](https://dhh.dk/) at Basecamp.
 
@@ -99,7 +99,7 @@ It depends.
 
 In this article I wanted to explore an answer that, unless you are [Bob Newhard waking from a dream sequence](https://youtu.be/ZgdUWXf8jJk), is somewhat of a cop-out answer.
 
-![Bob Hope Finale](bob_hope_finale.jpg?raw=true)
+![Bob Hope Finale](the-code-i-didnt-write/bob_hope_finale.jpg)
 
 But here goes nonetheless.
 
