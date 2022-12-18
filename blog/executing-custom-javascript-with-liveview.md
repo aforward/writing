@@ -7,7 +7,7 @@
 In your LiveView LEEX, you can add a `script` tag and append a `@tick` to the `id`.
 This will force for the MorphDOM differ to always re-render (aka re-run) that code on the client.
 
-![Create a script with tick ID](script_id_with_tick.png?raw=true)
+![Create a script with tick ID](executing-custom-javascript-with-liveview/script_id_with_tick.png)
 
 ## Article
 
@@ -27,7 +27,7 @@ refreshes itself?
 When ever you return data back to the client through the the websocket,
 consider adding an auto-incrementer.  This will allow you to uniquely track every _liveview_ refresh.
 
-![Adding a tick to every message](mounting_a_tick.png?raw=true)
+![Adding a tick to every message](executing-custom-javascript-with-liveview/mounting_a_tick.png)
 
 In friendly copy and paste code...
 
@@ -47,7 +47,7 @@ This is useful for a bunch of things, but let’s focus on running our custom ja
 
 In your LiveView LEEX, you can add a `script` tag and append the `@tick` to the `id`.   This will force for the MorphDOM differ to always re-render (aka re-run) that code on the client.
 
-![Create a script with tick ID](script_id_with_tick.png?raw=true)
+![Create a script with tick ID](executing-custom-javascript-with-liveview/script_id_with_tick.png)
 
 In friendly copy and paste code...
 
@@ -70,17 +70,17 @@ the system smartly put focus on the most appropriate input.
 So when the page loads, but focus on the input.  This can totally be done without
 JavaScript and plain old `autofocus` works well.
 
-![Autofocus on first input](focus_one.png?raw=true)
+![Autofocus on first input](executing-custom-javascript-with-liveview/focus_one.png)
 
 But, when you want to edit a particular stock, for example, we want to put focus on _that_ input.
 
-![Autofocus edit input](focus_two.png?raw=true)
+![Autofocus edit input](executing-custom-javascript-with-liveview/focus_two.png)
 
 And once done editing, put focus back on the original _new_ input.
 
 This was accomplished with the following code
 
-![Maintaining autofocus using a script](autofocus_example.png?raw=true)
+![Maintaining autofocus using a script](executing-custom-javascript-with-liveview/autofocus_example.png)
 
 In friendly copy and paste code...
 
