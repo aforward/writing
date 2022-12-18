@@ -42,12 +42,12 @@ to get the appropriate version
 That should download the SDK for your Mac ([not running OS X then check out the docs](https://docs.chef.io/install_dk.html)).
 and popup the installer.
 
-![ChefDK Installer](chefdk_installer.png?raw=true)
+![ChefDK Installer](installing-chefdk-on-mac/chefdk_installer.png?raw=true)
 
 If you click on the `.pkg` that will open up the installer.  Follow the
 instructions.
 
-![ChefDK Install Prompts](chefdk_install_prompt.png?raw=true)
+![ChefDK Install Prompts](installing-chefdk-on-mac/chefdk_install_prompt.png?raw=true)
 
 The installed things into `/opt/chefdk`. Let's make the chefdk
 tools available from anywhere on your machine by adding it
