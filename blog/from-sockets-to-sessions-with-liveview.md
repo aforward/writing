@@ -4,12 +4,18 @@
 
 ## Summary
 
+This article is based on a very early version of LiveView and
+is here for historical purposes only.
+
 How can you have your LiveView login form update the user's
 session across pages?
 
 ![Adding authenticated user to flash](from-sockets-to-sessions-with-liveview/flash_user.png)
 
 ## Article
+
+This article is based on a very early version of LiveView and
+is here for historical purposes only.
 
 As [part of my talk at EMPEX 2019](http://empex.co/events/2019/conference.html) on [LiveView](https://github.com/phoenixframework/phoenix_live_view),
 I showed a (hackish) way of using encrypted `:flash` messages as a means
