@@ -10,7 +10,7 @@ Visit the [VCL Cloud](https://orec.rdc.uottawa.ca/vcl/index.php) and
 create a new reservation for `CentOS7Basev3_EmacsOpam`.  Once
 ready, then you can SSH into your devbox and access OCaml.
 
-![Login Instructions](ocaml-and-vcl-cloud/06_login_instructions.png?raw=true)
+![Login Instructions](ocaml-and-vcl-cloud/06_login_instructions.png)
 
 ## Article
 
@@ -23,27 +23,27 @@ Go visit the VCL Cloud home page
 
 * https://orec.rdc.uottawa.ca/vcl/index.php
 
-![VCL Cloud](ocaml-and-vcl-cloud/01_vlc_login.png?raw=true)
+![VCL Cloud](ocaml-and-vcl-cloud/01_vlc_login.png)
 
 ### Create A Reservation
 
-![Create a new reservation](ocaml-and-vcl-cloud/02_new_reservations.png?raw=true)
+![Create a new reservation](ocaml-and-vcl-cloud/02_new_reservations.png)
 
 Figure out how long you want the server for.
 
-![Setup your reservation](ocaml-and-vcl-cloud/03_create_reservation.png?raw=true)
+![Setup your reservation](ocaml-and-vcl-cloud/03_create_reservation.png)
 
 Make sure you grab the correct version `CentOS7Basev3_EmacsOpam`.
 
-![EmacsOpam version](ocaml-and-vcl-cloud/04_emacs_opam.png?raw=true)
+![EmacsOpam version](ocaml-and-vcl-cloud/04_emacs_opam.png)
 
 And now you can connect
 
-![Connect to your server](ocaml-and-vcl-cloud/05_connect.png?raw=true)
+![Connect to your server](ocaml-and-vcl-cloud/05_connect.png)
 
 When the box is ready, you will be given the necessary login instruction
 
-![Login Instructions](ocaml-and-vcl-cloud/06_login_instructions.png?raw=true)
+![Login Instructions](ocaml-and-vcl-cloud/06_login_instructions.png)
 
 ### SSH Client
 
