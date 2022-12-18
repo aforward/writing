@@ -4,12 +4,18 @@
 
 ## Summary
 
+This article is based on a very early version of LiveView and is no longer
+the right way to run Custom JS code.
+
 In your LiveView LEEX, you can add a `script` tag and append a `@tick` to the `id`.
 This will force for the MorphDOM differ to always re-render (aka re-run) that code on the client.
 
 ![Create a script with tick ID](executing-custom-javascript-with-liveview/script_id_with_tick.png)
 
 ## Article
+
+This article is based on a very early version of LiveView and is no longer
+the right way to run Custom JS code.
 
 As [part of my talk at EMPEX 2019](http://empex.co/events/2019/conference.html) on [LiveView](https://github.com/phoenixframework/phoenix_live_view), I showed a way to execute custom JavaScript on a LiveView refresh.
 So where is how I do it?  If you know a better way, please reach out to me [@a4word](https://twitter.com/a4word) to discuss.
