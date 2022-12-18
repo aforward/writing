@@ -6,7 +6,7 @@
 
 Let's get up and running with OCaml and VS Code on a Mac.
 
-![VS Code up and running with OCaml](vscode_ocaml.png?raw=true)
+![VS Code up and running with OCaml](ocaml-and-vscode/vscode_ocaml.png)
 
 ## Article
 
@@ -82,7 +82,7 @@ eval $(opam env)
 If you open a new `Terminal` window, you should be able to run `utop`
 
 
-![Running utop](utop.png?raw=true)
+![Running utop](ocaml-and-vscode/utop.png)
 
 
 ### Install VS Code
@@ -110,11 +110,11 @@ cd /tmp
 
 To be able to run `code` from Terminal, open up Visual Code.
 
-![Open the command palette](01_view_palette.png?raw=true)
+![Open the command palette](ocaml-and-vscode/01_view_palette.png)
 
 And then install the command line tools
 
-![Install code on the command line](02_command.png?raw=true)
+![Install code on the command line](ocaml-and-vscode/02_command.png)
 
 
 ### Integrate OCAML with VS Code
@@ -122,14 +122,14 @@ And then install the command line tools
 We are going to use the [OCaml and Reason IDE extension](https://marketplace.visualstudio.com/items?itemName=freebroccolo.reasonml)
 which can be installed directly from VS Code.
 
-![install an extension](03_install_extension.png?raw=true)
+![install an extension](ocaml-and-vscode/03_install_extension.png)
 
 And search for `OCaml and Reason IDE`.
 
-![OCaml and Reason IDE extension](04_ocaml_and_reason_ide.png?raw=true)
+![OCaml and Reason IDE extension](ocaml-and-vscode/04_ocaml_and_reason_ide.png)
 
 If everything ran as expected (which is always does), then you should now have a nice IDE for [OCaml](https://ocaml.org) within VS Code.
 
-![VS Code up and running with OCaml](vscode_ocaml.png?raw=true)
+![VS Code up and running with OCaml](ocaml-and-vscode/vscode_ocaml.png)
 
 ### Happy Coding!
