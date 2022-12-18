@@ -7,7 +7,7 @@
 I have been looking at using [1Password's CLI tool](https://support.1password.com/command-line-getting-started/) to better manage secrets on the terminal.  1Password
 [strongly recommends you verify your download](https://support.1password.com/verify-command-line/).
 
-![Verify Mac Package fingerprint](mac-verify-fingerprint.png?raw=true)
+![Verify Mac Package fingerprint](shapkgsum-verify-mac-packages/mac-verify-fingerprint.png)
 
 I decided to write a small [shapkgsum](https://github.com/aforward/shapkgsum) script in [golang](https://golang.org) to make that verification easier to automate. 
 
@@ -16,11 +16,11 @@ I decided to write a small [shapkgsum](https://github.com/aforward/shapkgsum) sc
 I have been looking at using [1Password's CLI tool](https://support.1password.com/command-line-getting-started/) to better manage secrets on the terminal.  1Password
 [strongly recommends you verify your download](https://support.1password.com/verify-command-line/).
 
-![Verify Mac Package fingerprint](mac-verify-fingerprint.png?raw=true)
+![Verify Mac Package fingerprint](shapkgsum-verify-mac-packages/mac-verify-fingerprint.png)
 
 And that should be compared again the posted fingerprint
 
-![1Password fingerprint](1password-fingerprint.png?raw=true)
+![1Password fingerprint](shapkgsum-verify-mac-packages/1password-fingerprint.png)
 
 The installer does mention that `the installer automatically verifies the files in the package`, but I wanted to dive deeper into the process.
 
