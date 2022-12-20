@@ -8,10 +8,10 @@ After you install [Golang](https://golang.org/), it's
 easy to [install Packer from source](https://www.packer.io/intro/getting-started/install.html#compiling-from-source).
 
 ```bash
-mkdir -p ~/src && \
-  cd ~/src && \
-  git clone https://github.com/hashicorp/packer.git && \
-  cd packer && \
+mkdir -p ~/src && \\
+  cd ~/src && \\
+  git clone https://github.com/hashicorp/packer.git && \\
+  cd packer && \\
   make dev
 ```
 
@@ -34,10 +34,10 @@ For packer however, once [Golang](https://golang.org/) is installed, it seems ra
 to [install from source](https://www.packer.io/intro/getting-started/install.html#compiling-from-source).
 
 ```bash
-mkdir -p ~/src && \
-  cd ~/src && \
-  git clone https://github.com/hashicorp/packer.git && \
-  cd packer && \
+mkdir -p ~/src && \\
+  cd ~/src && \\
+  git clone https://github.com/hashicorp/packer.git && \\
+  cd packer && \\
   make dev
 ```
 
