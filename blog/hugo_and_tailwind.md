@@ -107,7 +107,7 @@ npx tailwindcss init
 
 Update the `purge` in `tailwind.config.js`
 
-```
+```javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
  purge: ['layouts/**/*.html'],
