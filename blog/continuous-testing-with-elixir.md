@@ -22,7 +22,7 @@ Randomized with seed 386800
 
 There is great power in having your tests always run, all the time when writing code, it stops the minor interruptions.
 
-First, let’s start a new Elixir app. If you are new to elixir then first check out the many resources to get started. I also published a very small example on GitHub, if you prefer to look at code than read articles.
+First, let's start a new Elixir app. If you are new to elixir then first check out the many resources to get started. I also published a very small example on GitHub, if you prefer to look at code than read articles.
 
 ```elixir
 $ mix new my_app
@@ -132,7 +132,7 @@ Finished in 0.05 seconds (0.05s on load, 0.00s on tests)
 Randomized with seed 474092
 ```
 
-Now let’s add a new test. Open up your new project in your favourite elixir editor and add a new test. For example, let’s see if two wrongs make a right (vi ./test/my_app_test.exs).
+Now let's add a new test. Open up your new project in your favourite elixir editor and add a new test. For example, let's see if two wrongs make a right (vi ./test/my_app_test.exs).
 
 ```elixir
 defmodule MyAppTest do
@@ -165,7 +165,7 @@ Finished in 0.07 seconds (0.07s on load, 0.00s on tests)
 Randomized with seed 807654
 ```
 
-Turns out two wrongs don’t make a right. Let’s update the test.
+Turns out two wrongs don't make a right. Let's update the test.
 
 ```elixir
 defmodule MyAppTest do

@@ -22,7 +22,7 @@ I showed a (hackish) way of using encrypted `:flash` messages as a means
 to communicate information from the LiveView websocket to the Connection Session.
 If you know a better way, please reach out to me [@a4word](https://twitter.com/a4word) to discuss.
 
-If you don’t know about LiveView, maybe [read more about that first](/articles/liveview-examples)
+If you don't know about LiveView, maybe [read more about that first](/articles/liveview-examples)
 
 ### Problem
 

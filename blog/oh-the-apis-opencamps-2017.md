@@ -1,24 +1,24 @@
-# Oh, the API Clients You’ll Build (in Elixir)
+# Oh, the API Clients You'll Build (in Elixir)
 #meta datetime 2017-11-27
 #meta tags[] talks elixir
 
 ## Summary
 
-![Oh, the API Clients You’ll Build (in Elixir)](talks/oh-the-apis-opencamps-2017/oh_the_apis.png)
+![Oh, the API Clients You'll Build (in Elixir)](talks/oh-the-apis-opencamps-2017/oh_the_apis.png)
 
 Today we are going explore how to write API clients in the [Elixir](https://elixir-lang.org) language. This is a follow-up article to my presentation at OpenCamps 2017.
 
 ## Article
 
-![Oh, the API Clients You’ll Build (in Elixir)](talks/oh-the-apis-opencamps-2017/oh_the_apis.png)
+![Oh, the API Clients You'll Build (in Elixir)](talks/oh-the-apis-opencamps-2017/oh_the_apis.png)
 
 Today we are going explore how to write API clients in the [Elixir](https://elixir-lang.org) language. This is a follow-up article to my presentation at OpenCamps 2017.
 
-[Elixir](https://elixir-lang.org) is relatively new programming language (v1.0 released in 2014), with one of it’s greatest features being that is stands on the shoulders of a giant in Erlang. That said, it is still quite rare to find official support in [Elixir](https://elixir-lang.org) for a lot of your favourite APIs. This leaves you with the task of writing your own, or possibly trying one of the many open source options out there.
+[Elixir](https://elixir-lang.org) is relatively new programming language (v1.0 released in 2014), with one of it's greatest features being that is stands on the shoulders of a giant in Erlang. That said, it is still quite rare to find official support in [Elixir](https://elixir-lang.org) for a lot of your favourite APIs. This leaves you with the task of writing your own, or possibly trying one of the many open source options out there.
 
 In this article, we will look at how you can build your own. The exercise of writing your own has many benefits. First, you learn a bit more about [Elixir](https://elixir-lang.org), the language, and how to leverage a bunch of it features. Second, you learn a bit more about the API you are working with. And finally, you gain some insight into how it could be built so that you can better evaluate the altneratives.
 
-Let’s dive in.
+Let's dive in.
 
 ### What Do We Mean API?
 
@@ -36,7 +36,7 @@ Leonard Richardson provided a nice breakdown of the [principles an a RESTful app
 
 ![RESTful maturity model](talks/oh-the-apis-opencamps-2017/restful_mm.png)
 
-OK, now let’s start talking Elixir.
+OK, now let's start talking Elixir.
 
 ### Elixir Libraries To Talk HTTP
 
@@ -46,7 +46,7 @@ There are lots of libraries available for interacting with HTTP services. Some i
 
 We are going to use [httpoison](https://hex.pm/packages/httpoison), it is a pure Elixir library built on top of [hackney](https://hex.pm/packages/hackney) and provides a very approachable interface.
 
-Here’s how to make a GET request out to a public API.
+Here's how to make a GET request out to a public API.
 
 ```elixir
 iex> HTTPoison.get!("https://api.github.com")
@@ -107,9 +107,9 @@ $ iex -S mix
 
 ### Decoding the Raw Response
 
-The response from our API is in it’s most raw form, in the case of the GitHub API it’s an encoded JSON string. This is not very usable within our Elixir client, so we much rather have something that we can manipulate more directly. For this, we will use poison, an Elixir library for dealing with JSON.
+The response from our API is in it's most raw form, in the case of the GitHub API it's an encoded JSON string. This is not very usable within our Elixir client, so we much rather have something that we can manipulate more directly. For this, we will use poison, an Elixir library for dealing with JSON.
 
-Here’s an example of decoding a JSON string into an Elixir map.
+Here's an example of decoding a JSON string into an Elixir map.
 
 ```elixir
 iex> Poison.decode("{\"a\": 1}", keys: :atoms)
@@ -118,7 +118,7 @@ iex> Poison.decode("{\"a\": 1}", keys: :atoms)
 
 You will notice that Poison follow a similar pattern of :ok and :error response tuples.
 
-Let’s incorporate that into our get method from above. But first, let’s refactor it a bit into it’s parts.
+Let's incorporate that into our get method from above. But first, let's refactor it a bit into it's parts.
 
 ```elixir
 def get(url, headers \\ []) do
@@ -158,7 +158,7 @@ Well, part of a response from the API, which until now we have ignored, are the 
 
 So now we can extract the content type and use that decode the response from our API.
 
-But before we tack that only our get method, let’s refactor it into it’s main parts.
+But before we tack that only our get method, let's refactor it into it's main parts.
 
 ```elixir
 def get(url, headers \\ []) do
@@ -191,7 +191,7 @@ end
 
 ### Implementing content_type
 
-Here’ s how we implement the content_type function.
+Here' s how we implement the content_type function.
 
 First, we want to keep the information above, so we have a pass-through function that will keep the status_code and raw body untouched. We will pattern match on the desired tuple returned from call above.
 
@@ -201,7 +201,7 @@ def content_type({ok, body, headers}) do
 end
 ```
 
-But the acutal implementation will just focus on the headers list. We can implement this function in three parts. The first function matches an empty list, so if the API didn’t provide us with a content-type, then we will default to JSON.
+But the acutal implementation will just focus on the headers list. We can implement this function in three parts. The first function matches an empty list, so if the API didn't provide us with a content-type, then we will default to JSON.
 
 ```elixir
 def content_type([]), do: "application/json"
@@ -217,7 +217,7 @@ def content_type([{"Content-Type", val} | _]) do
 end
 ```
 
-The last function matches a list again, but here it’s not the content-type, so we want to check the rest of the list.
+The last function matches a list again, but here it's not the content-type, so we want to check the rest of the list.
 
 ```elixir
 def content_type([_ | t]) do: content_type(t)
@@ -254,7 +254,7 @@ end
 
 We are using an Erlang function directly, and in this implementation we catch the `:exit` code that is raised if the XML is not well formed and instead wrap it in our consistent `{:error, reason}` response.
 
-Finally, if we don’t understand the encoded, we will pass the raw body through, as such.
+Finally, if we don't understand the encoded, we will pass the raw body through, as such.
 
 ```elixir
 def decode({ok, body, _}), do: {ok, body}
@@ -273,7 +273,7 @@ $ mix deps.get
 $ mix run --no-halt
 ```
 
-Let’s use Myclient to access our server.
+Let's use Myclient to access our server.
 
 ```elixir
 iex> Myclient.get("http://localhost:4000")
@@ -288,7 +288,7 @@ But not really.
 
 We have gone pretty far with our spike, but have not really talked about how we can test our client. Or, how to send data to the API. Or, how to handle those other API calls like `POST` and `PUT` and `DELETE`. Or, how to handle accessing protected API endpoints, using something like secure tokens or an OAuth2 like protocol.
 
-Let’s address some fo these concerns in more detail, and others will be left to the reader to explore on their own.
+Let's address some fo these concerns in more detail, and others will be left to the reader to explore on their own.
 
 ### Sending Data To The API
 

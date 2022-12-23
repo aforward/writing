@@ -86,7 +86,7 @@ We would have some sort API endpoint on the server and decide on the data handsh
 
 ![Client Server API Implementation](talks/empex-2019-liveview/api_impln.png)
 
-Our client then updates the display.  Here’s we have plain old HTML templates with javascript, but we could easily be using a templating engine like Mustache or Handlebars, and/or a full on state mangement framework like React, Vue or Angular.
+Our client then updates the display.  Here's we have plain old HTML templates with javascript, but we could easily be using a templating engine like Mustache or Handlebars, and/or a full on state mangement framework like React, Vue or Angular.
 
 ![Client Update](talks/empex-2019-liveview/client_update.png)
 
@@ -107,7 +107,7 @@ Our dividending application will support _email_ based authentication, and is im
 
 ![Login Step 1](talks/empex-2019-liveview/login_step_1.png)
 
-Some find this annoying, but we can’t please everyone all the time.  Our application, like others that are rarely used, can benefit from pushing authentication in the users email so they don’t have to remember another password.
+Some find this annoying, but we can't please everyone all the time.  Our application, like others that are rarely used, can benefit from pushing authentication in the users email so they don't have to remember another password.
 
 ![Login Step 2](talks/empex-2019-liveview/login_step_2.png)
 
@@ -123,7 +123,7 @@ It really should not be this hard.
 
 ### Enter Live View
 
-And tada, it isn’t.
+And tada, it isn't.
 
 <iframe src="/demo/empex" style="border: 0px" width="100%" height="800px"></iframe>
 
@@ -135,9 +135,9 @@ Check out the [source code our EMPEX logo demo](https://github.com/empex2019live
 
 Check out the [source code for our Hangman game](https://github.com/empex2019liveview/hangman).
 
-So it’s obviously not _no_ javascript, there is LiveView JavaScript that will be run on the client.  We are using Phoenix Channels and WebSockets which also involves JavaScript.  And, finally there are custom HTML phx- tags that are required to pull things together.
+So it's obviously not _no_ javascript, there is LiveView JavaScript that will be run on the client.  We are using Phoenix Channels and WebSockets which also involves JavaScript.  And, finally there are custom HTML phx- tags that are required to pull things together.
 
-Let’s look at the major moving parts of LiveView
+Let's look at the major moving parts of LiveView
 
 ### LiveView Client/Server Communication
 

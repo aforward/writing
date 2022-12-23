@@ -20,7 +20,7 @@ the right way to run Custom JS code.
 As [part of my talk at EMPEX 2019](http://empex.co/events/2019/conference.html) on [LiveView](https://github.com/phoenixframework/phoenix_live_view), I showed a way to execute custom JavaScript on a LiveView refresh.
 So where is how I do it?  If you know a better way, please reach out to me [@a4word](https://twitter.com/a4word) to discuss.
 
-If you don’t know about LiveView, maybe [read more about that first](/articles/liveview-examples)
+If you don't know about LiveView, maybe [read more about that first](/articles/liveview-examples)
 
 ## Problem
 
@@ -47,7 +47,7 @@ defp socket_reply(socket, reply \\ :noreply) do
 end
 ```
 
-This is useful for a bunch of things, but let’s focus on running our custom javascript.
+This is useful for a bunch of things, but let's focus on running our custom javascript.
 
 ## Reference that `@tick` in your `<script id="xxx">...</script>`
 
@@ -105,7 +105,7 @@ A few caveats.
 First, LiveView continues to evolve, so please check out the inter
 webs to see if this is still a valid approach (and if not, let me know).
 
-Second, don’t write lots of this kind of JavaScript.
+Second, don't write lots of this kind of JavaScript.
 If it hurts, you might not be doing it right so maybe consider
 taking a step back and trying to figure out what exactly are you
 trying to achieve and will this approach do as you expect.

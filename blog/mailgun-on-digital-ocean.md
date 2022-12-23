@@ -14,7 +14,7 @@ via [Mailgun](https://www.mailgun.com).
 
 Not having to manage an email server is awesome, thank you [Mailgun](https://www.mailgun.com). I am currently integrating with [Digital Ocean](https://m.do.co/c/e450543d2a29) and ran into some documentation confusion with DNS records, especially when trying to configure for a subdomain.
 
-After following [Mailgun’s instructions](https://help.mailgun.com/hc/en-us/articles/202052074-How-do-I-verify-my-domain-) (including the [Digital Ocean guide](https://www.digitalocean.com/community/questions/how-to-set-up-a-host-name-in-digitalocean), [alternate guide](https://code.krister.ee/mailgun-digitalocean/), and [community help](https://www.digitalocean.com/community/questions/failed-to-verify-domain-on-mailgun)) I was able to get it setup.
+After following [Mailgun's instructions](https://help.mailgun.com/hc/en-us/articles/202052074-How-do-I-verify-my-domain-) (including the [Digital Ocean guide](https://www.digitalocean.com/community/questions/how-to-set-up-a-host-name-in-digitalocean), [alternate guide](https://code.krister.ee/mailgun-digitalocean/), and [community help](https://www.digitalocean.com/community/questions/failed-to-verify-domain-on-mailgun)) I was able to get it setup.
 
 Note that all links to [Digital Ocean](https://m.do.co/c/e450543d2a29) are using my referral link.
 
@@ -43,7 +43,7 @@ k1._domainkey.mydomain.com. 1800 IN TXT “k=rsa; p=ABC1234+DEF/aSDF@!#$/FWAEF�
 email.mydomain.com. 1800 IN CNAME mailgun.org.
 ```
 
-[Digital Ocean](https://m.do.co/c/e450543d2a29)’s data entry provides shortcuts in the editor, so be sure to leave out mydomain.com, and use the @ symbol where necessary. Here’s what the values look like in [Digital Ocean](https://m.do.co/c/e450543d2a29)’s editor
+[Digital Ocean](https://m.do.co/c/e450543d2a29)'s data entry provides shortcuts in the editor, so be sure to leave out mydomain.com, and use the @ symbol where necessary. Here's what the values look like in [Digital Ocean](https://m.do.co/c/e450543d2a29)'s editor
 
 ![Digital Ocean DNS editor](mailgun-on-digital-ocean/do_dns_editor.png)
 
@@ -77,14 +77,14 @@ pic._domainkey.mg.mydomain.ca. 1800 IN TXT “k=rsa; p=MIGfMA0GCSqGSASDFASDFASDF
 email.mg.mydomain.ca. 1800 IN CNAME mailgun.org.
 ```
 
-[Digital Ocean](https://m.do.co/c/e450543d2a29)’s data entry provides shortcuts in the editor, so you will want to leave out mydomain.ca, but **NOT** mg. Here’s what the values look like in [Digital Ocean](https://m.do.co/c/e450543d2a29)’s editor.
+[Digital Ocean](https://m.do.co/c/e450543d2a29)'s data entry provides shortcuts in the editor, so you will want to leave out mydomain.ca, but **NOT** mg. Here's what the values look like in [Digital Ocean](https://m.do.co/c/e450543d2a29)'s editor.
 
 ![Digital Ocean editing subdomains in DNS editor](mailgun-on-digital-ocean/do_dns_subdomain_editor.png)
 
-Here’s what you need to change for your specific configuration
+Here's what you need to change for your specific configuration
 
 * A record for mg should by the IP provided by mailgun (not 1.2.3.4)
-* A record for @ should be your droplets’ IP (not mailgun’s)
+* A record for @ should be your droplets' IP (not mailgun's)
 * TXT record for mg should be wrapped in quotes
 * TXT record for pic.\_domainkey.mg should also be wrapped in quotes
 
@@ -96,7 +96,7 @@ First, you will need to create an entirely new domain for your subdomain in [Dig
 
 ![Digital Ocean add a domain](mailgun-on-digital-ocean/do_add_a_domain.png)
 
-The IP address of 1.2.3.4 should that from [Mailgun](https://www.mailgun.com) and NOT your droplet’s IP. Here is what the records will look like in editor.
+The IP address of 1.2.3.4 should that from [Mailgun](https://www.mailgun.com) and NOT your droplet's IP. Here is what the records will look like in editor.
 
 ![Digital Ocean DNS points to mailgun](mailgun-on-digital-ocean/do_dns_to_mailgun.png)
 

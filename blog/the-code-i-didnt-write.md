@@ -1,4 +1,4 @@
-# The Code I Didn’t Write
+# The Code I Didn't Write
 #meta datetime 2019-07-06
 #meta tags[] software
 
@@ -58,7 +58,7 @@ You must also communicate to your audience that probably has zero context about 
 + Or boring but works great,
 + Or maybe has a some historical significance
 
-It is also an intimidating question... you have to pick just _one_ piece of code and what’s beautiful to some might be utter rubbish to others.  Maybe someone thinks your code is too clever (and it shouldn't be), or maybe your code is too simple (and does not consider enough edge cases), or maybe you used a `foreach` loop and everyone knows (tongue in cheek) that a `map` is always better.
+It is also an intimidating question... you have to pick just _one_ piece of code and what's beautiful to some might be utter rubbish to others.  Maybe someone thinks your code is too clever (and it shouldn't be), or maybe your code is too simple (and does not consider enough edge cases), or maybe you used a `foreach` loop and everyone knows (tongue in cheek) that a `map` is always better.
 
 I see three general approaches to answering this question
 
@@ -108,7 +108,7 @@ But here goes nonetheless.
 Much like the feeling of pride when you get to delete code,
 there is equal enjoyment when you can avoid writing code in the first place.  Maybe you were able to solve the problem in a _simpler_ way, or you were able to avoid doing _what every does in similar situations_ because it was not needed in this particular case.
 
-In the abstract, this is a bit too motherly to provide much help to anyone.  So let’s instead look at a few examples to illustrate my thinking about _not_ writing code.
+In the abstract, this is a bit too motherly to provide much help to anyone.  So let's instead look at a few examples to illustrate my thinking about _not_ writing code.
 
 #### Flat Files Over A Database
 
@@ -124,7 +124,7 @@ I stored the data in JSON and despite some initial technical push-back, I was af
 
 And 4 years later, the flat files are still running strong. As a small confession, part of my concession when getting approval to push flat files was that I would eventually write a MySQL storage adapter.  And I did write it. But, it was never deployed. The flat-file implementation was not only simpler to deploy but also simpler to back-up and version control.
 
-So despite the fact that I actually _did_ write the MySQL adapter, as it was never officially used, I consider it among my examples of **code I didn’t have to write**.
+So despite the fact that I actually _did_ write the MySQL adapter, as it was never officially used, I consider it among my examples of **code I didn't have to write**.
 
 #### Zero Caching
 
@@ -141,7 +141,7 @@ Well, Hatch Mortgage switched IT companies mid project (due to reasons outside o
 
 The front end was re-written using Wordpress, but that little Mortgage API remained, unchanged and proved to be fast enough for their needs, and continues to be used to this day (2019).
 
-I focussed first on being _right_, and then on being _pretty_, and it turns out we didn’t need to _make it fast_ (as it was already fast enough for the use case).  Indeed some of the API payloads are large coming in at 100kb of data, but that pales in comparison to say a poorly compressed 4mb JPEG image.
+I focussed first on being _right_, and then on being _pretty_, and it turns out we didn't need to _make it fast_ (as it was already fast enough for the use case).  Indeed some of the API payloads are large coming in at 100kb of data, but that pales in comparison to say a poorly compressed 4mb JPEG image.
 
 
 #### Let Your Email Provider Do The Filtering
@@ -164,11 +164,11 @@ Here, the client was moving from a custom invoicing and payment system to integr
 
 Instead of integrating that accounting system directly with the payment gateway, we instead wrote a small adapter to make those accounting invoices look and behave like the  custom invoices.
 
-That tiny adapter (let’s say 100 lines of code or so) meant that our automatic billing solution remained unchanged, our custom checkout webapp also unchanged and our reconciliation service (to double check that all payments from our gateway were properly handled) also remained unchanged.
+That tiny adapter (let's say 100 lines of code or so) meant that our automatic billing solution remained unchanged, our custom checkout webapp also unchanged and our reconciliation service (to double check that all payments from our gateway were properly handled) also remained unchanged.
 
 Our solution ended up providing a second benefit.  Turns out that the accounting software had some shall we say _performance bottlenecks_ when serving up invoice data.  As invoices are write-once, we enabled _caching_ by changing the _fetch_ of the invoice data to only be done the first time, which took only a few lines of extra code.
 
-### Be proud of the code you don’t write.
+### Be proud of the code you don't write.
 
 Although the examples above did involve _some_ code, the underlying spirit of implementing the feature focussed on using what was already available.
 
