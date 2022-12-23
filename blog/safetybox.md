@@ -105,7 +105,7 @@ And, then in your code you can decrypt the data using the Application.get_env fu
 def conf(_env) do
   raw_password = Application.get_env(:myapp, :db_password)
   password = S.decrypt(raw_password, :myapp)
-  parse_url "ecto://myapp:# {password}@localhost/myapp"
+  parse_url "ecto://myapp:#{password}@localhost/myapp"
 end
 ```
 
@@ -133,7 +133,7 @@ The two-way encryption is a wrapper to [cryptex](https://github.com/scrogson/cry
 def encrypt(plaintext, secret, salt) when is_binary(secret) do
   secret
   |> K.generate(salt)
-  |> E.new(K.generate(secret, "signed # {salt}"))
+  |> E.new(K.generate(secret, "signed #{salt}"))
   |> E.encrypt_and_sign(plaintext)
 end
 ```

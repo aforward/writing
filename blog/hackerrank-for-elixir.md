@@ -13,7 +13,7 @@ defmodule Solution do
   def go() do
     num = input(:int)
     text = input(:string)
-    IO.puts("INPUTS # {num} and # {text}")
+    IO.puts("INPUTS #{num} and #{text}")
   end
 
   def input(:string), do: IO.read(:line) |> String.trim()
@@ -47,7 +47,7 @@ defmodule Solution do
   def go() do
     num = input(:int)
     text = input(:string)
-    IO.puts("INPUTS # {num} and # {text}")
+    IO.puts("INPUTS #{num} and #{text}")
   end
 
   def input(:string), do: IO.read(:line) |> String.trim()

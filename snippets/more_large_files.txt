@@ -1,0 +1,1 @@
+sudo du --max-depth=1 ./ | sort -n -r

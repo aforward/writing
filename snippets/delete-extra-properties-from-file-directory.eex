@@ -1,0 +1,15 @@
+# Delete extra properties from a file / directory
+
+Downloaded ZIP files are typically quarantined on Mac OSX,
+so you might run into forbidden issues when extracting something
+like a wordpress site.
+
+```bash
+$ xattr myapp.zip
+com.apple.quarantine
+
+xattr -d com.apple.quarantine myapp.zip
+
+# Or, if you already extracted it
+xattr -rd com.apple.quarantine ./myapp
+```
