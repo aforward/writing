@@ -3,7 +3,7 @@
 #meta published 1898-01-01
 #meta datetime 2023-01-14
 
-![War of the Worlds](covers/war-of-the-worlds.png)
+![War of the Worlds](covers/war-of-the-worlds.jpg)
 
 The original(ish) alien invasion story, starts innocently with
 the narrator telling the readers

@@ -3,7 +3,7 @@
 #meta published 2021-04-26
 #meta datetime 2021-12-20
 
-![Effortless](covers/effortless.png)
+![Effortless](covers/effortless.jpg)
 
 [Effortless](https://gregmckeown.com/books/effortless/).
 Getting ahead doesn’t have to be as hard as we make it.

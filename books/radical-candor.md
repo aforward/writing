@@ -3,7 +3,7 @@
 #meta published 2017-03-01
 #meta datetime 2023-01-14
 
-![Radical Candor](covers/radical-candor.png)
+![Radical Candor](covers/radical-candor.jpg)
 
 [Radical Candor](https://www.radicalcandor.com). Caring Personally while
 Challenging Directly — is guidance that’s both kind and clear,

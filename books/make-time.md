@@ -3,7 +3,7 @@
 #meta published 2018-09-01
 #meta datetime 2023-01-11
 
-![Make Time](covers/make-time.png)
+![Make Time](covers/make-time.jpg)
 
 [Make Time](https://maketime.blog) is not about crushing your to-do list, optimizing every hour,
 or maximizing personal productivity. It’s about rethinking the defaults

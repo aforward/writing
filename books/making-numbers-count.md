@@ -3,7 +3,7 @@
 #meta published 2022-01-11
 #meta datetime 2022-07-01
 
-![Making Numbers Count: The Art and Science of Communicating Numbers](covers/making-numbers-count.png)
+![Making Numbers Count: The Art and Science of Communicating Numbers](covers/making-numbers-count.jpg)
 
 How much bigger is a billion than a million?
 

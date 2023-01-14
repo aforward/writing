@@ -3,7 +3,7 @@
 #meta published 2018-01-30
 #meta datetime 2022-06-01
 
-![Great at Work: How Top Performers Do Less, Work Better, and Achieve More](covers/great-at-work.png)
+![Great at Work: How Top Performers Do Less, Work Better, and Achieve More](covers/great-at-work.jpg)
 
 Why do some people perform better at work than others? This deceptively simple question
 continues to confound professionals in all sectors of the workforce. Now,

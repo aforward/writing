@@ -3,7 +3,7 @@
 #meta published 2022-05-02
 #meta datetime 2023-01-15
 
-![Build: An Unorthodox Guide to Making Things Worth Making](covers/build.png)
+![Build: An Unorthodox Guide to Making Things Worth Making](covers/build.jpg)
 
 [Build: An Unorthodox Guide to Making Things Worth Making](https://www.buildc.com).
 How to think about choosing a job.

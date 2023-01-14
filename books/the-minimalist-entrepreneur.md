@@ -3,7 +3,7 @@
 #meta published 2021-10-26
 #meta datetime 2021-11-30
 
-![The Minimalist Entrepreneur: How Great Founders Do More with Less](covers/the-minimalist-entrepreneur.png)
+![The Minimalist Entrepreneur: How Great Founders Do More with Less](covers/the-minimalist-entrepreneur.jpg)
 
 The Minimalist Entrepreneur teaches founders how to:
 

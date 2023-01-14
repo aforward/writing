@@ -3,7 +3,7 @@
 #meta published 2016-05-17
 #meta datetime 2021-01-01
 
-![never-split-the-difference](covers/never-split-the-difference.png)
+![never-split-the-difference](covers/never-split-the-difference.jpg)
 
 Get your opposition to work to solve your problems.  "How am I going to do that?".
 

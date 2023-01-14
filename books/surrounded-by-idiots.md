@@ -3,7 +3,7 @@
 #meta published 2019-07-30
 #meta datetime 2022-10-01
 
-![Surrounded by Idiots: The Four Types of Human Behavior and How to Effectively Communicate with Each in Business (and in Life)](covers/surrounded-by-idiots.png)
+![Surrounded by Idiots: The Four Types of Human Behavior and How to Effectively Communicate with Each in Business (and in Life)](covers/surrounded-by-idiots.jpg)
 
 Author Thomas Erikson explains that there are four key behavior types that define
 how we interact with and perceive the people around us. Understanding someone's
