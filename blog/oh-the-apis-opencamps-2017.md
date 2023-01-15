@@ -4,13 +4,13 @@
 
 ## Summary
 
-![Oh, the API Clients You'll Build (in Elixir)](talks/oh-the-apis-opencamps-2017/oh_the_apis.png)
+![Oh, the API Clients You'll Build (in Elixir)](talks/oh-the-apis-opencamps-2017/oh_the_apis.jpg)
 
 Today we are going explore how to write API clients in the [Elixir](https://elixir-lang.org) language. This is a follow-up article to my presentation at OpenCamps 2017.
 
 ## Article
 
-![Oh, the API Clients You'll Build (in Elixir)](talks/oh-the-apis-opencamps-2017/oh_the_apis.png)
+![Oh, the API Clients You'll Build (in Elixir)](talks/oh-the-apis-opencamps-2017/oh_the_apis.jpg)
 
 Today we are going explore how to write API clients in the [Elixir](https://elixir-lang.org) language. This is a follow-up article to my presentation at OpenCamps 2017.
 
@@ -24,7 +24,7 @@ Let's dive in.
 
 For starters, API is a very overloaded term. So here, I am referring to RESTful APIs available over HTTP. These are indeed not the only meaning of API, but for this context that is what we are referring to.
 
-![API calls](talks/oh-the-apis-opencamps-2017/api_calls.png)
+![API calls](talks/oh-the-apis-opencamps-2017/api_calls.jpg)
 
 In the example above, we have a Weather API and several clients that interact with that API over HTTP. Those clients could be straight curl commands, or more likely a think wrapper written in the programming language like Ruby, Java, or in our case [Elixir](https://elixir-lang.org).
 
@@ -34,7 +34,7 @@ A RESTful service was defined back in 2000 by Roy Thomas Fielding as a design ap
 
 Leonard Richardson provided a nice breakdown of the [principles an a RESTful approach into various maturity levels](https://martinfowler.com/articles/richardsonMaturityModel.html), which was summarized well by Martin Fowler. The higher the level, the more closely you are following the full spirit of REST; but even any HTTP service offering could qualify as REST, just not a very mature implementation.
 
-![RESTful maturity model](talks/oh-the-apis-opencamps-2017/restful_mm.png)
+![RESTful maturity model](talks/oh-the-apis-opencamps-2017/restful_mm.jpg)
 
 OK, now let's start talking Elixir.
 
@@ -42,7 +42,7 @@ OK, now let's start talking Elixir.
 
 There are lots of libraries available for interacting with HTTP services. Some in pure elixir, others in Erlang, and bypass is a mocking library to help us test HTTP calls without actually reaching out the service.
 
-![Elixir Libraries To Talk HTTP](talks/oh-the-apis-opencamps-2017/elixir_rest_libs.png)
+![Elixir Libraries To Talk HTTP](talks/oh-the-apis-opencamps-2017/elixir_rest_libs.jpg)
 
 We are going to use [httpoison](https://hex.pm/packages/httpoison), it is a pure Elixir library built on top of [hackney](https://hex.pm/packages/hackney) and provides a very approachable interface.
 
@@ -284,7 +284,7 @@ We are well on our way to implementing a full fledged client.
 
 But not really.
 
-![Other API concerns](talks/oh-the-apis-opencamps-2017/api_other_concerns.png)
+![Other API concerns](talks/oh-the-apis-opencamps-2017/api_other_concerns.jpg)
 
 We have gone pretty far with our spike, but have not really talked about how we can test our client. Or, how to send data to the API. Or, how to handle those other API calls like `POST` and `PUT` and `DELETE`. Or, how to handle accessing protected API endpoints, using something like secure tokens or an OAuth2 like protocol.
 

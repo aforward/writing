@@ -108,7 +108,7 @@ Enter the password for aforward@hey.com at my.1password.com:
 
 You can find most of information in the `Preferences` of the 1Password GUI.
 
-![1password secret information](1password/secrets.png)
+![1password secret information](1password/secrets.jpg)
 
 One password will then give you a 30-minute token
 
@@ -203,7 +203,7 @@ that you were sworn to protect.
 In the diagram below we show how we can isolate the safety
 of `opsession` from its usage (and ultimate destruction).
 
-![Creating opsession locally](1password/opsession-safety.png)
+![Creating opsession locally](1password/opsession-safety.jpg)
 
 In the above,
 

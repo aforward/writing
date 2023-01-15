@@ -6,25 +6,25 @@
 
 Want to automate your infrastructure leveraging the awesome [Digital Ocean API V2](https://developers.digitalocean.com/documentation/v2/), then the shell is your friend. Here we will learn about how to access the API from the command line using Elixir's [Escript](https://hexdocs.pm/mix/master/Mix.Tasks.Escript.Build.html) tooling.
 
-![doex API for digital ocean on hex](doex/doex_on_hex.png)
+![doex API for digital ocean on hex](doex/doex_on_hex.jpg)
 
 ## Article
 
 Want to automate your infrastructure leveraging the awesome [Digital Ocean API V2](https://developers.digitalocean.com/documentation/v2/), then the shell is your friend. Here we will learn about how to access the API from the command line using Elixir's [Escript](https://hexdocs.pm/mix/master/Mix.Tasks.Escript.Build.html) tooling.
 
-![doex API for digital ocean on hex](doex/doex_on_hex.png)
+![doex API for digital ocean on hex](doex/doex_on_hex.jpg)
 
 Doex, access [Digital Ocean](https://m.do.co/c/e450543d2a29)'s API through the shell and/or Elixir
 
 First, if you don't know [Digital Ocean](https://m.do.co/c/e450543d2a29) (my referral link should you wish to sign up, we both get a little kickback) is a cloud provider that helps you spin up new servers, quickly, to help get your application into production.
 
-![Digital Ocean create droplet](doex/create_droplet.png)
+![Digital Ocean create droplet](doex/create_droplet.jpg)
 
 With features like [Floating IPs](https://www.digitalocean.com/community/tutorials/how-to-use-floating-ips-on-digitalocean), [Load Balancers](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-load-balancer), and [Firewalls](https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-cloud-firewalls) you can be up and running with a production grade setup on the cheap.
 
 After setting up your DO account, you then need to generate a new Token through the API link from the top of your digital ocean dashboard.
 
-![Digital Ocean API tokens](doex/do_api_tokens.png)
+![Digital Ocean API tokens](doex/create_droplet.jpg)
 ## That's not a real token, so don't bother trying
 
 Store that token safely, as it allows scripts to perform actions on your account without human intervention.
@@ -94,7 +94,7 @@ mix doex.droplets.create mydroplet \
 
 It's just that easy.
 
-![my droplet created](doex/mydroplet.png)
+![my droplet created](doex/mydroplet.jpg)
 
 The command line script is still evolving, but all GET/POST DigitalOcean endpoints are available from the [elixir doex library](https://github.com/capbash/doex).
 
@@ -128,7 +128,7 @@ Use "doctl [command] --help" for more information about a command.
 
 There are also a few other Elixir specific libraries, but none that have gained much traction and none provide both elixir API access AND command line access.
 
-![Alternatives to elixir Digital Ocean clients](doex/altneratives_do_clients.png)
+![Alternatives to elixir Digital Ocean clients](doex/altneratives_do_clients.jpg)
 
 Yep, that's doex at the the bottom there with a ton of downloads; watch out!
 

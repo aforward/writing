@@ -6,11 +6,11 @@
 
 Learning to draw is a slow process, but it is about the journey right!
 
-![Spacecat](doodles/spacecat.png)
+![Spacecat](doodles/spacecat.jpg)
 
 ## Article
 
-![Spacecat](doodles/spacecat.png)
+![Spacecat](doodles/spacecat.jpg)
 
 I am trying to get better at drawing and decided that drawing inspiration
 from doodles on the internet are the way to go.

@@ -22,7 +22,7 @@ Note that all links to [Digital Ocean](https://m.do.co/c/e450543d2a29) are using
 
 If you are setting up your account directly against your domain, then things are a bit easier (and the instructions work a little more as expected). If you are setting up against a subdomain, skim this section as the subdomain instructions are a bit different.
 
-![New domain on mailgun](mailgun-on-digital-ocean/new_domain_on_mailgun.png)
+![New domain on mailgun](mailgun-on-digital-ocean/new_domain_on_mailgun.jpg)
 
 I wanted to provide my view of how to get things configured should the *shorthand* editor in [Digital Ocean](https://m.do.co/c/e450543d2a29) change between now and when you are reading me.
 
@@ -45,7 +45,7 @@ email.mydomain.com. 1800 IN CNAME mailgun.org.
 
 [Digital Ocean](https://m.do.co/c/e450543d2a29)'s data entry provides shortcuts in the editor, so be sure to leave out mydomain.com, and use the @ symbol where necessary. Here's what the values look like in [Digital Ocean](https://m.do.co/c/e450543d2a29)'s editor
 
-![Digital Ocean DNS editor](mailgun-on-digital-ocean/do_dns_editor.png)
+![Digital Ocean DNS editor](mailgun-on-digital-ocean/do_dns_editor.jpg)
 
 Please note that 10.20.30.40 is the IP address of your droplet and NOT that provided by mailgun.
 
@@ -53,11 +53,11 @@ Please note that 10.20.30.40 is the IP address of your droplet and NOT that prov
 
 If you want to keep your primary domain free and clear from [Mailgun](https://www.mailgun.com), you might consider setting up a subdomain to route all email through.
 
-![Using instead a subdomain on mailgun](mailgun-on-digital-ocean/subdomain_domain_on_mailgun.png)
+![Using instead a subdomain on mailgun](mailgun-on-digital-ocean/subdomain_domain_on_mailgun.jpg)
 
 Please note that in this example I have NOT configured the MX records, and you will not be able to receive emails. This is because at the moment [Digital Ocean](https://m.do.co/c/e450543d2a29) does not directly support subdomain MX records. If you do configure your MX records, your account will still show as active, but the MX records will not be configured as you expect in Mailgun.
 
-![MX records on mailgun](mailgun-on-digital-ocean/mailgun_mx_records.png)
+![MX records on mailgun](mailgun-on-digital-ocean/mailgun_mx_records.jpg)
 
 Skip to the next section if you will want to both send AND receive emails from your subdomain. See [here](https://www.digitalocean.com/community/questions/mx-record-for-subdomains) and [here](https://www.digitalocean.com/community/questions/sub-domains-with-mx-records-for-mailgun) for discussions about the limitations in the DNS editor.
 
@@ -79,7 +79,7 @@ email.mg.mydomain.ca. 1800 IN CNAME mailgun.org.
 
 [Digital Ocean](https://m.do.co/c/e450543d2a29)'s data entry provides shortcuts in the editor, so you will want to leave out mydomain.ca, but **NOT** mg. Here's what the values look like in [Digital Ocean](https://m.do.co/c/e450543d2a29)'s editor.
 
-![Digital Ocean editing subdomains in DNS editor](mailgun-on-digital-ocean/do_dns_subdomain_editor.png)
+![Digital Ocean editing subdomains in DNS editor](mailgun-on-digital-ocean/do_dns_subdomain_editor.jpg)
 
 Here's what you need to change for your specific configuration
 
@@ -94,15 +94,15 @@ If you wish to receive emails from mg.mydomain.com, then you have a little bit m
 
 First, you will need to create an entirely new domain for your subdomain in [Digital Ocean](https://m.do.co/c/e450543d2a29)
 
-![Digital Ocean add a domain](mailgun-on-digital-ocean/do_add_a_domain.png)
+![Digital Ocean add a domain](mailgun-on-digital-ocean/do_add_a_domain.jpg)
 
 The IP address of 1.2.3.4 should that from [Mailgun](https://www.mailgun.com) and NOT your droplet's IP. Here is what the records will look like in editor.
 
-![Digital Ocean DNS points to mailgun](mailgun-on-digital-ocean/do_dns_to_mailgun.png)
+![Digital Ocean DNS points to mailgun](mailgun-on-digital-ocean/do_dns_to_mailgun.jpg)
 
 In the above the 1.2.3.4 IP address is the one provided by Mailgun, and NOT your DigitalOcean droplet. Once those settings propagate you should be able to receive emails from @mg.mydomain.com.
 
-![Mailgun working MX records](mailgun-on-digital-ocean/mailgun_working_mx_records.png)
+![Mailgun working MX records](mailgun-on-digital-ocean/mailgun_working_mx_records.jpg)
 
 Do not copy and paste anything from this post, and instead use the values provided by [Mailgun](https://www.mailgun.com).
 

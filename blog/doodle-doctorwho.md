@@ -6,13 +6,13 @@
 
 Played around with some Doctor Who sketches
 
-![Tardises or maybe it's Tardii](doodles/tardises.png)
+![Tardises or maybe it's Tardii](doodles/tardises.jpg)
 
 ## Article
 
 Huge Doctor Who fan, and working through a few sketches.
 
-![Tardises or maybe it's Tardii](doodles/tardises.png)
-![Dalek](doodles/dalek.png)
-![Weeping Angle 1](doodles/weepingangle1.png)
-![Weeping Angle 2](doodles/weepingangle2.png)
+![Tardises or maybe it's Tardii](doodles/tardises.jpg)
+![Dalek](doodles/dalek.jpg)
+![Weeping Angle 1](doodles/weepingangle1.jpg)
+![Weeping Angle 2](doodles/weepingangle2.jpg)

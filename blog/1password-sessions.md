@@ -38,7 +38,7 @@ op signin --raw my aforward@hey.com > opsession
 
 Now instead of building a _forever_ re-useable `opsession` ([as we did with expect](/articles/1password-bootstrap)), we now have a 30-minute `opsession` token (within a file) that we can share with our build server as seen below (step B).
 
-![1password token file](1password/opsession-token.png)
+![1password token file](1password/opsession-token.jpg)
 
 Our automation scripts can now use the `--session` flag pointing to the contents
 of our token with `cat opsession`.  For example.

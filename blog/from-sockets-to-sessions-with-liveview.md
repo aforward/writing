@@ -10,7 +10,7 @@ is here for historical purposes only.
 How can you have your LiveView login form update the user's
 session across pages?
 
-![Adding authenticated user to flash](from-sockets-to-sessions-with-liveview/flash_user.png)
+![Adding authenticated user to flash](from-sockets-to-sessions-with-liveview/flash_user.jpg)
 
 ## Article
 
@@ -114,7 +114,7 @@ If you dig into the Phoenix and LiveView code, you will see that
 this information is encrypted between the server and client to
 avoid the client _writing_ their own flash messages.
 
-![Putting Flash in a LiveView message](from-sockets-to-sessions-with-liveview/put_flash.png)
+![Putting Flash in a LiveView message](from-sockets-to-sessions-with-liveview/put_flash.jpg)
 
 ### Using Flash to pass along login success
 
@@ -122,7 +122,7 @@ Knowing that the flash messages can contain any JSONable record, and that
 those messages are encrypted, we can use that that flash information
 from the LiveView genserver back to the server.
 
-![Adding authenticated user to flash](from-sockets-to-sessions-with-liveview/flash_user.png)
+![Adding authenticated user to flash](from-sockets-to-sessions-with-liveview/flash_user.jpg)
 
 In friendly copy and paste code...
 
@@ -148,7 +148,7 @@ defp socket_reply(socket, reply \\ :noreply), do: {reply, socket}
 On the server connection, we can then look at the `:user` flash message
 to check if we were logged in from LiveView
 
-![Fetch user from flash](from-sockets-to-sessions-with-liveview/fetch_flash.png)
+![Fetch user from flash](from-sockets-to-sessions-with-liveview/fetch_flash.jpg)
 
 In friendly copy and paste code...
 

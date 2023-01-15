@@ -26,7 +26,7 @@ seen popup in a few times and it goes something like this...
 
 ## Show us some of your code, and talk about it
 
-![Academia vs Business](the-code-i-didnt-write/academia_vs_business.png)
+![Academia vs Business](the-code-i-didnt-write/academia_vs_business.jpg)
 <div class="reference"><a href="https://xkcd.com/664/">XKCD Cartoon</a></div>
 
 
@@ -82,7 +82,7 @@ Regardless how pure you want your answer to be, in this context it is being aske
 
 In one (of many) great talks from [Chad Fowler](http://chadfowler.com/), we get some insight into the [dangers of stability and homeostatis](https://www.youtube.com/watch?v=sAsRtZEGMMQ).  The system _should_ be heterogenous by default and getting into the habit of throwing code away.
 
-![Heterogenous By Default](the-code-i-didnt-write/heterogenous_by_default.png)
+![Heterogenous By Default](the-code-i-didnt-write/heterogenous_by_default.jpg)
 
 Contrast that with an tweet from from [David Heinemeier Hansson](https://dhh.dk/) at Basecamp.
 
