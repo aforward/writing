@@ -26,7 +26,7 @@ accessibility, and bugs.
 A snapshot report for [anunknown.dev](https://anunknown.dev) is shown below
 [click here to generate a new report](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fanunknown.dev%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext).
 
-![Lighthouse Report](website-tools/lighthouse_full_report.png)
+![Lighthouse Report](website-tools/lighthouse_full_report.jpg)
 
 [From the plugin itself](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 is an open-source, automated tool for improving the performance, quality, and correctness of your web apps.
@@ -39,4 +39,4 @@ When auditing a page, Lighthouse runs a barrage of tests against the page, and t
 
 But even at 100%, there are always opportunities for improvements.
 
-![Lighthouse diagnostics](website-tools/lighthouse_diagnostics.png)
+![Lighthouse diagnostics](website-tools/lighthouse_diagnostics.jpg)
