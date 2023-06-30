@@ -107,7 +107,7 @@ unit for building our machine learning algorithms.
 
 ![tensor_01](empex-2023-machine-learning/tensor_01.png)
 
-Let's create some in [Elixir Nx using Livebook](https://github.com/aforward-oss/empex_recommend/fillmein).
+Let's create some in [Elixir Nx using Livebook](https://github.com/aforward-oss/empex_recommend/notebooks).
 
 ![tensor_02](empex-2023-machine-learning/tensor_02.png)
 
@@ -332,8 +332,147 @@ And there we have it, our first integration of machine learning into an elixir p
 
 ![pizza_summary](empex-2023-machine-learning/pizza_summary.png)
 
+### Recommender System
+
+![recommend](empex-2023-machine-learning/recommend.png)
+
+Much of what we needed for our Pizzeria example is equally applicable to a recommender system such as.... Defining our data, the features and the labels, fitting the data to a model, predicting values, evaluating the results, tweaking all of the above until our model reaches a satisfactory level of error.
+
+Let's build on that are incorporate additional recommender needs.
+
+![gamedrop_01](empex-2023-machine-learning/gamedrop_01.png)
+
+The gifting platform is not an open system, and so I have no code to share with you so I am going to bait-and-switch the example.  So we are going to build a game recommendation engine for a video game tavern.  This is a restaurant where you can rent games by the hour, different games have different prices and games provide different types of game play.  Contrived, but should help give you a feel as we enter the final lap of this talk.
+
+![gamedrop_02](empex-2023-machine-learning/gamedrop_02.png)
+
+First, like any ML system, we need to identify our features, our label and our model type
+
+![gamedrop_03](empex-2023-machine-learning/gamedrop_03.png)
+
+So let's say our user wants to play a cheap adventure game, we might recommend Pitfall.
+
+![gamedrop_04](empex-2023-machine-learning/gamedrop_04.png)
+
+But if you are willing to pay a lot then we might recommend Zelda.
+
+![which_algo](empex-2023-machine-learning/which_algo.png)
+
+So which algorithm should we choose?  We know (or at least should know) I didn't pick Neural Networks, as they were too intimidating for us to consider as a first stab.  We also skipped on K-means as it is an unsupervised algorithm (and not even discussed in this talk).  K-Nearest Neighbours was strongly considered, but ultimately we landed on Naive Bayes.  From our analysis it seems like a straightforward model to start with and as I previously discussed this is an iterative approach so it is less about getting the right model and more getting the right feedback loop to support continuous and quantitative improvement.
+
+![gamedrop_05](empex-2023-machine-learning/gamedrop_05.png)
+
+With our features, labels and model type decided on, we are ready to implement our recommender system.  For our cold start we will be asking our users "hey how much do you want to spend and what kinds of games do you like" and from there we will pick the games that best align with those similar attributes.
+
+![budget_01](empex-2023-machine-learning/budget_01.png)
+
+Our application stores the rental cost, per hour for each game.  For our machine learning algorithm, we will need to group these into budget categories such as Cheap, Standard and Premium.  We can then turn each of those values in a TRUE/FALSE (or 1/0) to describe is the budget cheap yes or no, is the budget moderate yes or no, is the budget expensive yes or no.  This flattening out is called one-hot-encoding and many ML algorithms like it and that includes Naive Bayes.
+
+![one_hot_encode_01](empex-2023-machine-learning/one_hot_encode_01.png)
+
+Here is how we one-hot-encode a value in Nx.  The output would be?
+
+![one_hot_encode_02](empex-2023-machine-learning/one_hot_encode_02.png)
+
+We ask each value in the second tensor, are you equal to the first value.  Only the "3" returns true
+
+![one_hot_encode_03](empex-2023-machine-learning/one_hot_encode_03.png)
+
+Here's the full code to turn string categories into numeric one-hot-encoded tensors. The heavy lifting of our Nx equal method.
+
+![one_hot_encode_04](empex-2023-machine-learning/one_hot_encode_04.png)
+
+But tensors are numerics only, so we need to convert a string of categories into an number between 1 and N.
+
+![one_hot_encode_05](empex-2023-machine-learning/one_hot_encode_05.png)
+
+If we are not strict about values being in the set, we reserve "0" as a catchall, hence the 0..num_categories.  If we are strict, then the available values are just 1..n.
+
+![gameplay_01](empex-2023-machine-learning/gameplay_01.png)
+
+A game might be categorized under multiple styles of game play. Chess and checkers would just be Role Playing.  But Zelda 2 might be considered both an action AND a quest.  Note that we actually have more than three game plays, I just want to showcase multi-hot-encoding.  You can refer to the code examples for an implementation of multi_hot_encoding.
+
+![gameplay_02](empex-2023-machine-learning/gameplay_02.png)
+
+Our tavern group are excellent at picking out great games, so they have a database of the most popular games to recommend to their users.
+
+![multi_hot_encode](empex-2023-machine-learning/multi_hot_encode.png)
+
+So we will train our model with the budget and gameplay features along with the N games in our dataset. In Elixir, we use Nx.concatenate along with my helper code to 1-hot and multi-hot encode.  For the games we categorize them as 1 to N games, we don't need to hot-encode them.
+
+![fit_predict_01](empex-2023-machine-learning/fit_predict_01.png)
+
+We then feed that into our Naive Bayes algorithm using the fit function, but we also need to tell the algorithm how many categories, or in our case games, we have.
+
+![fit_predict_02](empex-2023-machine-learning/fit_predict_02.png)
+
+Once we have our model, we provide an unlabelled example of a budget and a desired list of game play types, and our model will infer a suitable game. In Elixir we use that same Nx.concatenate, and instead of LinearRegression, we use NaiveBayes and I picked Complement as it seems to provide the best distance metric.
+
+![fit_predict_03](empex-2023-machine-learning/fit_predict_03.png)
+
+And if we want the TOP N categories they we can grab the prediction probabilities, sort them, and then return the top 5 answers.
+
+![fit_predict_04](empex-2023-machine-learning/fit_predict_04.png)
+
+Separately, if want to decouple the specific algorithm from the prediction, we can use apply to generically run our prediction.
+
+![gamedrop_complete](empex-2023-machine-learning/gamedrop_complete.png)
+
+And our quest is complete
+
+![verdict](empex-2023-machine-learning/verdict.png)
+
+What would you do if you were in my position?
+
+* Elixir is great for web development, data transformation and now for ML.
+* Livebook makes ML examples so approachable
+* But, not as transferrable a skill if your next role only accepts Python.  The fundamentals do not change, but
 
 ### References
 
 * [GitHub Source Code](https://github.com/aforward-oss/empex_recommend)
+* [Empex Conference](https://empex.co)
+* [Gift Better](https://giftbetter.co)
+* [Fly.io](https://fly.io)
 
+#### Persons
+
+* [Arthur Samuel](https://en.wikipedia.org/wiki/Arthur_Samuel_(computer_scientist))
+* [Cunningham's Law](https://meta.wikimedia.org/wiki/Cunningham's_Law)
+* [Falling Into The Pit of Success (Coding Horror)](https://blog.codinghorror.com/falling-into-the-pit-of-success/)
+
+
+#### Articles
+
+* [How to solve a real machine learning problem with Nx (dockyard)]https://dockyard.com/blog/2022/09/22/how-to-solve-a-real-machine-learning-problem-with-nx
+* [Elixir versus Python for Data Science (dockyard)](https://dockyard.com/blog/2022/07/12/elixir-versus-python-for-data-science)
+* [Tensors and Nx, are not just for machine learning (flyio)](https://fly.io/phoenix-files/tensors-and-nx-are-not-just-for-machine-learning/)
+* [Traditional Machine Learning with Scholar (flyio)](https://dockyard.com/blog/2023/05/09/traditional-machine-learning-with-scholar)
+
+#### Courses / Data
+
+* [Introduction to Machine Learning (Google)](https://developers.google.com/machine-learning/crash-course/ml-intro)
+* [How Models Work (kaggle)](https://www.kaggle.com/code/dansbecker/how-models-work)
+* [Video Game Dataset (kaggle)](https://www.kaggle.com/datasets/jummyegg/rawg-game-dataset)
+* [HuggingFace Models](https://huggingface.co/models)
+* [ONNX](https://onnx.ai/index.html)
+* [VegaLite](https://vega.github.io/vega-lite/)
+
+#### Source Code
+
+* [nx (github)](https://github.com/elixir-nx/nx)
+* [exla (github nx)](https://github.com/elixir-nx/nx/tree/main/exla#readme)
+* [bumblebee (github nx)](https://github.com/elixir-nx/bumblebee)
+* [tokenizers (github nx)](https://github.com/elixir-nx/tokenizers)
+* [scidata (github nx)](https://github.com/elixir-nx/scidata)
+* [axon (github nx)](https://github.com/elixir-nx/axon)
+* [axononnx (github nx)](https://github.com/elixir-nx/axon_onnx)
+* [explorer (github nx)](https://github.com/elixir-nx/explorer)
+* [livebook (github)](https://github.com/livebook-dev/livebook)
+* [vegalite (github livebook)](https://github.com/livebook-dev/vega_lite)
+* [kino (github livebook](https://github.com/livebook-dev/kino)
+* [calculating distance (ex code)](https://github.com/elixir-nx/scholar/blob/main/lib/scholar/metrics/distance.ex)
+* [tokenizers (github huggingface)](https://github.com/huggingface/tokenizers)
+* [transformers (github huggingface)](https://github.com/huggingface/transformers)
+* [pandas](https://pandas.pydata.org/)
+* [jupyter](https://jupyter.org/)
